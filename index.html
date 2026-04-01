@@ -7,6 +7,144 @@
     <meta name="description" content="Two Birds Innovation helps small and medium businesses in Southwestern Ontario adopt AI workflows. $2,500 AI Workflow Audit. $4,000/month Fractional AI Leadership.">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Phase 3 inline styles -->
+    <style>
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .problem-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+        .problem-card:hover {
+            border-color: #2dd4bf;
+            transform: translateY(-2px);
+        }
+        .problem-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            margin: 0;
+        }
+
+        /* Services upsell note */
+        .services-note {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .services-note a {
+            color: #2dd4bf;
+            text-decoration: underline;
+        }
+        .services-note a:hover {
+            color: #5eead4;
+        }
+
+        /* Tools grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .tool-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+        .tool-card:hover {
+            border-color: #2dd4bf;
+            transform: translateY(-2px);
+        }
+        .tool-card h3 {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+        .tool-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            flex: 1;
+        }
+        .tool-card .tool-link {
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            display: inline-block;
+            transition: color 0.2s ease;
+        }
+        .tool-card .tool-link:hover {
+            color: #5eead4;
+        }
+
+        /* Why Two Birds section */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .why-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .why-card h3 {
+            color: #2dd4bf;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .why-card p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* About section */
+        .about-text {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Contact details */
+        .contact-details {
+            margin-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+        .contact-details a {
+            color: #2dd4bf;
+            text-decoration: none;
+        }
+        .contact-details a:hover {
+            color: #5eead4;
+            text-decoration: underline;
+        }
+    </style>
+
     <!-- FAQPage Schema -->
     <script type="application/ld+json">
     {
@@ -74,7 +212,9 @@
             "addressCountry": "CA"
         },
         "description": "AI strategy and fractional product leadership for small and medium businesses in Southwestern Ontario.",
-        "priceRange": "$2,500 - $4,000/month"
+        "priceRange": "$2,500 - $4,000/month",
+        "email": "aaron.patzalek@gmail.com",
+        "telephone": "519-933-9294"
     }
     </script>
 </head>
@@ -84,9 +224,11 @@
         <div class="container">
             <a href="#" class="logo">Two Birds Innovation</a>
             <nav class="main-nav">
+                <a href="#problem">The Gap</a>
                 <a href="#results">Results</a>
                 <a href="#services">Services</a>
                 <a href="#tools">Free Tools</a>
+                <a href="#why">Why Us</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -97,11 +239,30 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>AI Strategy That Ships</h1>
-            <p class="hero-subtitle">We help small and medium businesses in Southwestern Ontario adopt AI workflows, build digital products, and make better decisions.</p>
+            <h1>Two Birds Innovation</h1>
+            <p class="hero-subtitle">AI Strategy and Digital Products for Southwestern Ontario</p>
+            <p class="hero-tagline" style="font-size: 1.15rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; margin-bottom: 2rem;">We help local SMEs navigate the AI transition — without the Toronto price tag.</p>
             <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Book a Call</a>
-                <a href="#tools" class="btn btn-secondary">Try Our Free Tool</a>
+                <a href="https://twobirds-kramerica.github.io/clarity/" class="btn btn-primary" target="_blank" rel="noopener">Get your free business diagnostic</a>
+                <a href="#services" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section">
+        <div class="container">
+            <h2>The AI Gap Is Real</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <p>Overwhelmed by AI tools — every vendor has a solution, none of them talk to each other.</p>
+                </div>
+                <div class="problem-card">
+                    <p>Can't afford internal AI expertise — hiring a full-time person starts at $120K.</p>
+                </div>
+                <div class="problem-card">
+                    <p>Don't know where to start — the options feel endless and the stakes feel high.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -165,17 +326,51 @@
                     <a href="#contact" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
+            <p class="services-note">Not sure which you need? Start with <a href="https://twobirds-kramerica.github.io/clarity/" target="_blank" rel="noopener">Clarity</a> — it's free.</p>
         </div>
     </section>
 
     <!-- Free Tools -->
     <section id="tools" class="section free-tools">
         <div class="container">
-            <div class="tools-card">
-                <h2>Free Tool: Clarity</h2>
-                <p>Not sure where AI fits in your business? Clarity is a free diagnostic tool that helps you map your priorities, identify quick wins, and build a plan — in under 15 minutes.</p>
-                <a href="https://twobirds-kramerica.github.io/clarity/" class="btn btn-primary btn-large" target="_blank" rel="noopener">Try Clarity Free</a>
-                <p class="tools-note">No sign-up required. No data stored. Runs entirely in your browser.</p>
+            <h2>Free Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Clarity</h3>
+                    <p>AI-powered business diagnostic. Map your priorities and build a plan.</p>
+                    <a href="https://twobirds-kramerica.github.io/clarity/" class="tool-link" target="_blank" rel="noopener">Try it free &rarr;</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Digital Confidence Centre</h3>
+                    <p>Free bilingual digital literacy for Canadian seniors. 19 modules.</p>
+                    <a href="https://twobirds-kramerica.github.io/digital-confidence/" class="tool-link" target="_blank" rel="noopener">Try it free &rarr;</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Career Coach</h3>
+                    <p>AI-powered job application tracker and analysis tool.</p>
+                    <a href="https://twobirds-kramerica.github.io/career-coach/" class="tool-link" target="_blank" rel="noopener">Try it free &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Two Birds -->
+    <section id="why" class="section">
+        <div class="container">
+            <h2>Why Two Birds</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>The Name</h3>
+                    <p>Fraternal twins — two things starting at the same origin point, travelling in divergent directions. Innovation requires holding two ideas at once.</p>
+                </div>
+                <div class="why-card">
+                    <h3>The Philosophy</h3>
+                    <p>Essentialism + Lovability. Do fewer things, but make each one matter. Build products people actually want to use.</p>
+                </div>
+                <div class="why-card">
+                    <h3>The Motto</h3>
+                    <p>Always forward. Never quit. Grow bravely. Support with care.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -209,15 +404,26 @@
         </div>
     </section>
 
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About</h2>
+            <p class="about-text">Founded by Aaron Patzalek — 20 years of product leadership, most recently at Telus. Based in St. Thomas, Ontario. Committed to building AI capacity in the community where he lives.</p>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="section contact">
         <div class="container">
             <h2>Let's Talk</h2>
             <p>Ready to explore what AI can do for your business?</p>
-            <a href="mailto:aaron@twobirds.ca?subject=Two%20Birds%20Innovation%20%E2%80%94%20Inquiry" class="btn btn-primary btn-large contact-btn">
+            <a href="mailto:aaron.patzalek@gmail.com?subject=Two%20Birds%20Innovation%20%E2%80%94%20Inquiry" class="btn btn-primary btn-large contact-btn">
                 Email Us
             </a>
-            <p class="contact-note">Aaron Patzalek · St. Thomas, Ontario · <a href="mailto:aaron@twobirds.ca">aaron@twobirds.ca</a></p>
+            <p class="contact-note">Aaron Patzalek · St. Thomas, Ontario</p>
+            <div class="contact-details">
+                <p><a href="mailto:aaron.patzalek@gmail.com">aaron.patzalek@gmail.com</a> · <a href="tel:519-933-9294">519-933-9294</a></p>
+            </div>
         </div>
     </section>
 
