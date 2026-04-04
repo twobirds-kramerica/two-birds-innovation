@@ -143,6 +143,29 @@
             color: #5eead4;
             text-decoration: underline;
         }
+
+        /* ── Mobile Responsive ── */
+        @media (max-width: 768px) {
+            .container { padding: 0 16px; }
+            .section { padding: 3rem 0; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .services-grid, .tools-grid, .why-grid { display: block; }
+            .service-card, .tool-card, .why-card { margin-bottom: 1rem; }
+            .nav-links { display: none; }
+            .btn { min-height: 44px; font-size: 1rem; display: block; width: 100%; text-align: center; }
+            .faq-list { padding: 0; }
+            details summary { min-height: 44px; padding: 12px 0; }
+            img, iframe { max-width: 100%; height: auto; }
+        }
+
+        @media (max-width: 375px) {
+            body { font-size: 16px; overflow-x: hidden; }
+            .container { padding: 0 12px; }
+            h1 { font-size: 1.6rem; word-wrap: break-word; }
+            .section { padding: 2rem 0; }
+            .btn-primary { padding: 14px 20px; font-size: 1.1rem; }
+        }
     </style>
 
     <!-- FAQPage Schema -->
