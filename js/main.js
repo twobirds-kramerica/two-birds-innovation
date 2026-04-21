@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (toggle && nav) {
         toggle.addEventListener('click', function () {
-            nav.classList.toggle('active');
+            var open = nav.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
         nav.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 nav.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
             });
         });
     }

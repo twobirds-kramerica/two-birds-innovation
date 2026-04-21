@@ -3,6 +3,26 @@
    Deep space design with teal accents
    ============================================ */
 
+/* Skip-to-content link — first focusable element (WCAG 2.4.1) */
+.skip-link {
+    position: absolute;
+    top: -48px;
+    left: 8px;
+    background: #2dd4bf;
+    color: #0c0a1d;
+    padding: 12px 16px;
+    border-radius: 0 0 6px 6px;
+    font-weight: 700;
+    z-index: 9999;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
 :root {
     --space-900: #0c0a1d;
     --space-800: #13102e;
