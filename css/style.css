@@ -690,6 +690,19 @@ body {
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.85);
 }
+.about-text.portfolio-evidence {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+.about-text.portfolio-evidence a {
+    color: #2dd4bf;
+    text-decoration: none;
+}
+.about-text.portfolio-evidence a:hover,
+.about-text.portfolio-evidence a:focus-visible {
+    text-decoration: underline;
+}
 
 /* Contact details */
 .contact-details {
