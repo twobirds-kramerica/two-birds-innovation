@@ -1,5 +1,19 @@
 # Two Birds Innovation — Company Brand Site HAL Stack Rigor Audit
 
+> **⚠ PROGRESS UPDATE 2026-04-22** — 1 of 5 §8 Top-5 next-actions has SHIPPED; 4 remain open (all blocked on Aaron input or design time). Do NOT treat §8 as an untouched backlog.
+>
+> | # | Action | Status |
+> |---|---|---|
+> | 1 | Mailto to Calendly | **Open** — blocked on Aaron providing Calendly URL (P1 in aaron-todos-2026-04-21) |
+> | 2 | Add LinkedIn link to contact section | **Open** — blocked on Aaron confirming URL (P1 in aaron-todos) |
+> | 3 | Add OG card | **Open** — design work, blocked on Aaron's time |
+> | 4 | First case study or pilot walkthrough | **Open** — blocked on having a pilot |
+> | 5 | Extract inline `<style>` block to style.css | **Shipped** in `3b06118` S-TBI-STYLE-EXTRACT |
+>
+> Also shipped post-audit: portfolio-evidence line under About section (`d88bc09`) as a factual substitute for a testimonial block, and preconnect cleanup — ancillary to §8. Note: 4 of the 5 open items need Aaron input, not Claude Code time.
+
+
+
 **Audit date:** 2026-04-21
 **Auditor:** Claude Code (Opus 4.7 · max-mode autonomous) for Aaron Patzalek
 **Sprint:** S-TBI-HYGIENE (self-directed; parallel rigor pattern to S-CLARITY, S-KEVIN, S-AARON earlier today)
