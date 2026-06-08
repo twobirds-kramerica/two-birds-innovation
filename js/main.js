@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Animated counters on scroll
     var counters = document.querySelectorAll('.counter-card');
     var animated = false;
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function animateCounters() {
         if (animated) return;
@@ -33,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 var target = parseInt(card.getAttribute('data-target'), 10);
                 var numberEl = card.querySelector('.counter-number');
                 if (!numberEl || isNaN(target)) return;
+                if (prefersReducedMotion) {
+                    numberEl.textContent = target;
+                    return;
+                }
                 var current = 0;
                 var duration = 1500;
                 var step = Math.max(1, Math.floor(target / (duration / 16)));
