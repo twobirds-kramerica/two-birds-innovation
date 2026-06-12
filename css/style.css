@@ -6,7 +6,7 @@
 /* Skip-to-content link — first focusable element (WCAG 2.4.1) */
 .skip-link {
     position: absolute;
-    top: -48px;
+    top: -72px;
     left: 8px;
     background: var(--teal-400);
     color: #0c0a1d;
@@ -309,7 +309,7 @@ body {
 .price-term {
     display: block;
     font-size: 0.9rem;
-    color: var(--grey-500);
+    color: var(--grey-400);
     margin-bottom: 24px;
 }
 
@@ -437,7 +437,7 @@ body {
 
 .contact-note {
     font-size: 0.9rem;
-    color: var(--grey-500);
+    color: var(--grey-400);
 }
 
 .contact-note a {
@@ -454,13 +454,13 @@ body {
     padding: 24px 0;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.06);
-    color: var(--grey-500);
+    color: var(--grey-400);
     font-size: 0.9rem;
 }
 
 .site-footer a {
     color: inherit;
-    opacity: 0.7;
+    text-decoration: underline;
 }
 
 /* ============================================
@@ -1114,6 +1114,14 @@ body {
         align-items: flex-start;
         text-align: left;
     }
+}
+
+/* Visible keyboard focus (closes PRODUCT.md a11y gap: no :focus-visible styles) */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--teal-300);
+    outline-offset: 2px;
 }
 
 @media (max-width: 375px) {
