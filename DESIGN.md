@@ -157,3 +157,72 @@ Ease-out preferred. No bounce, no elastic.
 | Hero-metric template | ⚠️ Counter grid — needs Aaron shape decision |
 | Identical card grids | ⚠️ 3× same card base — needs differentiation |
 | Border-left ban | ✅ None found |
+
+---
+
+## §9 Consulting IA — Phase 2 Blueprint
+
+**Status:** Draft — Phase 1 research complete 2026-06-19. Blocked on Aaron inputs (see checklist below). Do not build Phase 2 until Aaron approves.
+
+### Phase 2 Section Order
+
+| # | Section | Rationale |
+|---|---------|-----------|
+| 1 | Hero (split) | Keep existing layout; update copy with outcome-first framing |
+| 2 | Problem / Context | "You've been told to do something with AI" — validates the visitor's situation before pitching |
+| 3 | What You Get | Two fixed-price services with prices visible; remove ambiguity |
+| 4 | How It Works | 3-step process (Discovery → Audit → Deliverable); reduces anxiety for institutional buyers |
+| 5 | Results / Case Studies | Named outcome or anonymised sector + metric; P0 trust signal for B2G |
+| 6 | Who We Serve | Library/nonprofit + SWON SME; geographic anchor |
+| 7 | Pricing | $2,500 CAD flat + $4,000/month; NHSP/grant alignment language |
+| 8 | Data Safety | 2-line Canadian data sovereignty statement; PIPEDA/MFIPPA language |
+| 9 | FAQ | Existing 5 questions + new: "Is my data stored?", "Do you work with library boards?", "What if I need to justify this to a funder?" |
+| 10 | CTA Strip | Primary + secondary; risk-reduction copy beneath |
+| 11 | Footer | Unchanged |
+
+### CTA Hierarchy
+
+- **Primary CTA:** "Book a Discovery Call" (Calendly link, 30 min, free)
+- **Secondary CTA:** "See our work" (links to DCC, KevsCasa, Career Coach as build-proof)
+- **Near-CTA risk reduction (below primary button):** "Fixed price. 30-day delivery. No contract."
+- **Hero sub-CTA:** Same primary CTA; do not add a second action in the hero
+
+### Gap-to-Priority Table (from customer-positioning-draft.md)
+
+| Gap | Current site | Priority |
+|-----|-------------|---------|
+| No case study / outcome section | Missing entirely | P0 — institutional buyers will not proceed without this |
+| No "How it works" process section | Missing | P0 — fixed-price audit needs step-by-step to reduce anxiety |
+| No pricing transparency | Missing | P1 — librarians and nonprofit PDs need a number before contacting |
+| No "Is my data safe?" signal | Missing | P1 — PIPEDA and MFIPPA sensitivity for library/nonprofit audience |
+| No grant/NHSP language | Missing | P1 — connects $2,500 audit to existing budget lines |
+| No Canadian data sovereignty statement | Missing | P2 — reinforces L1-L3 stack posture as a feature |
+| Counter grid is hero-metric template | ⚠️ Present | P2 — impeccable ban; needs Aaron shape decision |
+| Hero CTA missing risk-reduction copy | Partial | P2 — add "Fixed price. 30-day delivery. No contract." near CTA |
+
+### Phase 2 Blocked-On (Aaron inputs required before build)
+
+| # | Item | Who | Priority |
+|---|------|-----|---------|
+| 1 | 1 named client outcome or pilot reference (even anonymised sector + metric) | Aaron | P0 |
+| 2 | Aaron photo for bio section | Aaron | P1 |
+| 3 | NHSP/CanCode grant alignment language approved | Aaron | P1 |
+| 4 | Pricing confirmed public ($2,500 and $4K/month publishable?) | Aaron decision | P1 |
+| 5 | "Is my data safe?" 2-line answer | Aaron | P1 |
+| 6 | Counter grid direction: (A) single bold stat + context, (B) outcomes list, or (C) delete | Aaron | P2 |
+| 7 | Phase 2 IA order approved (this section) | Aaron | Gate |
+
+### Voice Rules for Phase 2 Copy
+
+Do:
+- Geographic anchor: "Southwestern Ontario" named explicitly
+- Outcome-first: "Your team saves 4 hours a week" not "We leverage cutting-edge AI"
+- Build proof: link to DCC, KevsCasa, Clarity as delivery evidence
+- Fixed-price framing: "Scoped. Delivered. Done."
+
+Avoid:
+- "Cutting-edge," "leverage," "synergy," "transformative," "next-level"
+- Americanisms ("defense" → "defence", "program" → "programme" in educational contexts)
+- "AI pioneer" or any unverifiable superlative
+- Toronto-scale enterprise language
+- Passive claims: "we help organisations" → "Aaron builds" / "your team gets"
