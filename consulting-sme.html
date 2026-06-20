@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-CA" style="color-scheme: light;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting for Canadian SMEs | Two Birds Innovation</title>
+    <meta name="description" content="One-person consulting practice for Canadian small and medium enterprises. Business discovery, diagnostic consulting, market expansion, and process improvement — from a perspective outside your building.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://twobirds-kramerica.github.io/two-birds-innovation/consulting-sme.html">
+    <meta property="og:title" content="Consulting for Canadian SMEs | Two Birds Innovation">
+    <meta property="og:description" content="The problem you see is rarely the problem you have. Business discovery and diagnostic consulting for Canadian SMEs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://twobirds-kramerica.github.io/two-birds-innovation/consulting-sme.html">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:image" content="https://twobirds-kramerica.github.io/two-birds-innovation/images/og-card.png">
+
+    <!-- Font note: Lora + Source Sans 3 are SIL OFL licensed.
+         Self-hosting sprint is queued to eliminate Google Fonts CDN dependency (L3 → L2). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Direction B — Narrative & Warm */
+        :root {
+            --cream:      #f8f5f0;
+            --cream-card: #fdf9f4;
+            --cream-tint: rgba(45, 106, 79, 0.07);
+            --green-dark: #1b4332;  /* WCAG AA with white: ~9:1 */
+            --green-mid:  #2d6a4f;  /* accent on cream */
+            --text-primary:   #141f14;
+            --text-secondary: #3e5440;
+            --text-muted:     #7a8b72;
+            --border:    #e0d9d1;
+            --white:     #ffffff;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--cream);
+            color: var(--text-primary);
+            font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* ── Skip link ─────────────────────────────────────────── */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--green-dark);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+        .skip-link:focus { left: 1rem; }
+
+        /* ── Layout ─────────────────────────────────────────────── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Navigation ─────────────────────────────────────────── */
+        .site-header {
+            background: var(--cream);
+            border-bottom: 1px solid var(--border);
+            padding: 1.1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .main-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .main-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover { color: var(--green-mid); }
+        .nav-cta {
+            font-weight: 600;
+            color: var(--green-dark) !important;
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.4rem 0.7rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            min-width: 44px;
+            min-height: 44px;
+        }
+
+        /* ── Hero ───────────────────────────────────────────────── */
+        .hero {
+            padding: 88px 0 72px;
+        }
+        .hero-inner { max-width: 780px; }
+        .hero-eyebrow {
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green-mid);
+            margin-bottom: 1.25rem;
+        }
+        .hero h1 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 3.4rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        .hero-stat {
+            background: var(--cream-tint);
+            border-radius: 8px;
+            padding: 1rem 1.4rem;
+            margin-bottom: 1.75rem;
+            font-size: 0.97rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        .hero-stat strong {
+            font-style: normal;
+            color: var(--text-primary);
+        }
+        .hero-body {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 660px;
+        }
+
+        /* ── Buttons ────────────────────────────────────────────── */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            min-height: 44px;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--green-dark);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--green-mid);
+            transform: translateY(-1px);
+        }
+        .btn-white {
+            background: var(--white);
+            color: var(--green-dark);
+            font-weight: 700;
+        }
+        .btn-white:hover {
+            background: #f0fdf4;
+            transform: translateY(-1px);
+        }
+
+        /* ── Divider ────────────────────────────────────────────── */
+        .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+        /* ── Services section ───────────────────────────────────── */
+        .services-section { padding: 80px 0; }
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--green-mid);
+            margin-bottom: 0.9rem;
+        }
+        .section-heading {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
+        }
+        .section-sub {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 560px;
+            margin-bottom: 2.5rem;
+        }
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+        .svc-card {
+            background: var(--cream-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+        .svc-num {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green-mid);
+            margin-bottom: 0.5rem;
+        }
+        .svc-card h3 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.55rem;
+        }
+        .svc-card p {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            line-height: 1.65;
+        }
+
+        /* ── Footer CTA — forest green ──────────────────────────── */
+        .cta-section {
+            background: var(--green-dark);
+            padding: 88px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.05rem;
+            max-width: 500px;
+            margin: 0 auto 2.25rem;
+        }
+        .cta-email {
+            margin-top: 1.25rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+        .cta-email a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+        .cta-email a:hover { color: rgba(255, 255, 255, 0.85); }
+
+        /* ── Site footer ────────────────────────────────────────── */
+        .site-footer {
+            background: var(--cream-card);
+            border-top: 1px solid var(--border);
+            padding: 1.75rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .site-footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .site-footer a:hover { text-decoration: underline; }
+
+        /* ── Responsive ─────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .hero { padding: 56px 0 48px; }
+            .hero h1 { font-size: 2.2rem; }
+            .main-nav { display: none; }
+            .main-nav.open {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0; right: 0;
+                background: var(--cream);
+                border-bottom: 1px solid var(--border);
+                padding: 0.5rem 0;
+            }
+            .main-nav.open li { border-bottom: 1px solid var(--border); }
+            .main-nav.open a { display: block; padding: 0.85rem 1.5rem; }
+            .nav-toggle { display: flex; align-items: center; justify-content: center; }
+            .site-header { position: relative; }
+            .svc-grid { grid-template-columns: 1fr; }
+            .section-heading { font-size: 1.65rem; }
+            .cta-section h2 { font-size: 1.75rem; }
+            .services-section { padding: 56px 0; }
+            .cta-section { padding: 56px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.85rem; }
+            .container { padding: 0 16px; }
+            .hero-body { font-size: 1rem; }
+        }
+
+        /* Prevent dark mode — this page has no dark variant */
+        @media (prefers-color-scheme: dark) {
+            body { background: var(--cream); color: var(--text-primary); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="index.html" class="logo">Two Birds Innovation</a>
+                <nav aria-label="Main navigation" id="main-nav">
+                    <ul class="main-nav" id="nav-list">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://calendly.com/twobirdsinnovation/30min" target="_blank" rel="noopener" class="nav-cta">Book a call</a></li>
+                    </ul>
+                </nav>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-list" id="nav-toggle">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-inner">
+                    <p class="hero-eyebrow">Two Birds Innovation &middot; SME Consulting</p>
+                    <h1>The problem you see is rarely the problem you have.</h1>
+                    <p class="hero-stat">
+                        <strong>85% of executives say their organisation is bad at diagnosing the real problem.</strong>
+                        &nbsp;&mdash;&nbsp;Harvard Business Review, 2017
+                    </p>
+                    <p class="hero-body">I work with one business at a time. Not a firm, not a framework &mdash; just an outside perspective that asks the questions your team cannot, because they are too close to it. You leave with a clear picture of what is actually in the way, and what to do about it first.</p>
+                    <a href="#contact" class="btn btn-primary">Let's have a conversation &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Services -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <p class="section-label">What I do</p>
+                <h2 class="section-heading">Four ways to work together</h2>
+                <p class="section-sub">Most engagements start with a short discovery conversation. From there, we choose the right scope.</p>
+                <div class="svc-grid">
+                    <div class="svc-card">
+                        <p class="svc-num">01</p>
+                        <h3>Business Discovery</h3>
+                        <p>A focused conversation about what is working, what is not, and what assumptions your team has stopped questioning. Most clients leave with a different understanding of their problem than when they arrived.</p>
+                    </div>
+                    <div class="svc-card">
+                        <p class="svc-num">02</p>
+                        <h3>Diagnostic Consulting</h3>
+                        <p>A structured audit of your current processes, tools, and team. Written findings, a clear priority list, and specific next steps &mdash; not a slide deck full of generics.</p>
+                    </div>
+                    <div class="svc-card">
+                        <p class="svc-num">03</p>
+                        <h3>Market Expansion</h3>
+                        <p>Research and strategy for moving into a new customer segment or geography. Grounded in what your existing customers actually value, not what your competitors claim to offer.</p>
+                    </div>
+                    <div class="svc-card">
+                        <p class="svc-num">04</p>
+                        <h3>Process Improvement</h3>
+                        <p>Mapping and simplifying the workflows that cost your team the most time. Finding where AI saves real hours &mdash; and where it would just add noise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer CTA — forest green section -->
+        <section id="contact" class="cta-section" aria-label="Contact">
+            <div class="container">
+                <h2>The first conversation is free. And honest.</h2>
+                <p>No pitch, no proposal until we both agree there is something worth working on. You will leave with at least one useful observation.</p>
+                <a href="https://calendly.com/twobirdsinnovation/30min" class="btn btn-white" target="_blank" rel="noopener">Reach out to Aaron</a>
+                <p class="cta-email">Or email directly: <a href="mailto:aaron.patzalek@gmail.com">aaron.patzalek@gmail.com</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Aaron Patzalek &middot; Two Birds Innovation &middot; St. Thomas, Ontario &middot; <a href="privacy.html">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        var toggle = document.getElementById('nav-toggle');
+        var navList = document.getElementById('nav-list');
+        toggle.addEventListener('click', function() {
+            var expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+            navList.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
