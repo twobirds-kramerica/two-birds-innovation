@@ -74,7 +74,7 @@
 
 **Trust signals:**
 - Grants company profile page (already built: `grants/company-overview.html`)
-- Physical address (36 St Catharine St or mailing address — St. Thomas, ON)
+- Physical address (business mailing address — St. Thomas, ON)
 - Canadian registration implied by GST/HST registration and Ontario incorporation (if filed)
 - Privacy policy with PIPEDA compliance statement
 - No inflated claims ("20+ years of experience" not "industry-leading AI pioneer")
