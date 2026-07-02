@@ -276,6 +276,15 @@ body {
     border: 1px solid rgba(255,255,255,0.06);
 }
 
+/* How We Work — 3-step engagement process */
+.steps-lead { text-align: center; color: rgba(255,255,255,0.72); max-width: 640px; margin: 0 auto 40px; }
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.step-card { background: var(--space-700); border-radius: var(--radius); padding: 36px 28px; border: 1px solid rgba(255,255,255,0.06); }
+.step-number { width: 40px; height: 40px; border-radius: 100px; background: var(--teal-500); color: var(--space-900); font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.step-card h3 { margin: 0 0 10px; }
+.step-card p { color: rgba(255,255,255,0.72); margin: 0; line-height: 1.6; }
+@media (max-width: 720px) { .steps-grid { grid-template-columns: 1fr; } }
+
 .pricing-card.featured {
     border: 2px solid var(--teal-500);
 }
