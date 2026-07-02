@@ -285,6 +285,13 @@ body {
 .step-card p { color: rgba(255,255,255,0.72); margin: 0; line-height: 1.6; }
 @media (max-width: 720px) { .steps-grid { grid-template-columns: 1fr; } }
 
+/* Case study / social proof — honest self-attributed proof (no side-stripe per impeccable audit) */
+.case-study { max-width: 760px; margin: 44px auto 0; background: var(--space-700); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius); padding: 32px 36px; }
+.case-study blockquote { margin: 0; }
+.case-study__headline { font-size: 1.15rem; font-weight: 700; color: var(--teal-500); margin: 0 0 12px; }
+.case-study blockquote p { color: rgba(255,255,255,0.8); line-height: 1.65; margin: 0; }
+.case-study figcaption { margin-top: 16px; color: rgba(255,255,255,0.6); font-weight: 600; font-size: 0.9rem; }
+
 .pricing-card.featured {
     border: 2px solid var(--teal-500);
 }
