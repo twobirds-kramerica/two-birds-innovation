@@ -124,7 +124,7 @@ From AUDIT.md (2026-04-21):
 | Gate requirement | Status |
 |-----------------|--------|
 | PRODUCT.md exists | ✅ This file |
-| /impeccable audit run this quarter | ❌ Pending — rigor AUDIT.md exists (April 21) but /impeccable design audit not yet run |
+| /impeccable audit run this quarter | ✅ Done 2026-07-02 — `AUDIT-impeccable-2026-07-02.md` (scored 14/20; P1 = adopt self-hosted brand fonts; findings documented, not gate-blocking) |
 | Shape brief approved (structural redesigns) | N/A — new page, not a structural redesign |
 | Fonts verified SIL OFL | ✅ System fonts only — no external font files |
 | Dark mode tested on Android Chrome | ❌ Pending Aaron verification |
