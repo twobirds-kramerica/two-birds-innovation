@@ -1,0 +1,172 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Two Birds Innovation" [ref=e5] [cursor=pointer]:
+        - /url: "#"
+      - navigation "Main navigation" [ref=e6]:
+        - link "Products" [ref=e7] [cursor=pointer]:
+          - /url: "#products"
+        - link "Who We Serve" [ref=e8] [cursor=pointer]:
+          - /url: "#serve"
+        - link "Services" [ref=e9] [cursor=pointer]:
+          - /url: "#services"
+        - link "FAQ" [ref=e10] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e12]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Two Birds Innovation
+        - heading "AI strategy and digital tools that work outside the tech corridor" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Fractional product leadership and purpose-built platforms for libraries, municipalities, and SMEs across Southwestern Ontario.
+        - generic [ref=e20]:
+          - link "Book a discovery call →" [ref=e21] [cursor=pointer]:
+            - /url: https://calendly.com/twobirdsinnovation/30min
+          - link "See our products" [ref=e22] [cursor=pointer]:
+            - /url: "#products"
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: Digital Confidence Centre
+        - paragraph [ref=e31]: "Module 1: The Escape Hatch"
+    - generic [ref=e44]:
+      - heading "What We Have Built" [level=2] [ref=e45]
+      - paragraph [ref=e46]: Production platforms already in use by libraries and community organizations across Canada. No login required. No data collected.
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Digital Literacy Platform
+          - heading "Digital Confidence Centre" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Free digital literacy for Canadian communities. 29 adult modules, 25+ kids activities, library-ready outcome measurement, and NHSP grant-compatible delivery.
+          - link "Explore DCC →" [ref=e52] [cursor=pointer]:
+            - /url: https://twobirds-kramerica.github.io/digital-confidence/
+        - generic [ref=e53]:
+          - paragraph [ref=e54]: AI Business Diagnostic
+          - heading "Clarity" [level=3] [ref=e55]
+          - paragraph [ref=e56]: 15-minute diagnostic that maps your AI priorities, identifies your biggest gaps, and produces a concrete action plan. No sign-up, no API key required to try.
+          - link "Try Clarity free →" [ref=e57] [cursor=pointer]:
+            - /url: https://twobirds-kramerica.github.io/clarity/
+        - generic [ref=e58]:
+          - paragraph [ref=e59]: Rental Intelligence
+          - heading "KevsCasa" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Apartment search with ranked listings, neighbourhood safety scores, commute estimates, and contact tracking. Configurable for settlement agencies and housing non-profits.
+          - link "View KevsCasa →" [ref=e62] [cursor=pointer]:
+            - /url: https://kevscasa.pages.dev/
+    - generic [ref=e64]:
+      - heading "Who We Work With" [level=2] [ref=e65]
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - img [ref=e68]
+          - paragraph [ref=e70]: Libraries and non-profits
+          - paragraph [ref=e71]: Digital literacy program delivery, facilitator training, NHSP and Canada Digital Adoption Program grant support.
+        - generic [ref=e72]:
+          - img [ref=e73]
+          - paragraph [ref=e75]: Small and medium businesses
+          - paragraph [ref=e76]: AI workflow audits and fractional product leadership for 5-100 employee companies in manufacturing, professional services, and trades.
+        - generic [ref=e77]:
+          - img [ref=e78]
+          - paragraph [ref=e80]: Municipalities and Crown corps
+          - paragraph [ref=e81]: Resident-facing digital tools, AODA-compliant design, and community program delivery at scale.
+    - generic [ref=e83]:
+      - heading "Services" [level=2] [ref=e84]
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - heading "AI Workflow Audit" [level=3] [ref=e87]
+          - generic [ref=e88]: $2,500
+          - generic [ref=e89]: flat fee
+          - list [ref=e90]:
+            - listitem [ref=e91]: ✓ 30-day engagement
+            - listitem [ref=e92]: ✓ Full operations review
+            - listitem [ref=e93]: ✓ AI opportunity mapping
+            - listitem [ref=e94]: ✓ Prioritized action plan
+            - listitem [ref=e95]: ✓ Executive summary report
+          - link "Start an Audit" [ref=e96] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e97]:
+          - generic [ref=e98]: Recommended
+          - heading "Fractional AI Leadership" [level=3] [ref=e99]
+          - generic [ref=e100]: $4,000
+          - generic [ref=e101]: per month
+          - list [ref=e102]:
+            - listitem [ref=e103]: ✓ One dedicated day per week
+            - listitem [ref=e104]: ✓ AI strategy and execution
+            - listitem [ref=e105]: ✓ Product development
+            - listitem [ref=e106]: ✓ Team coaching and workshops
+            - listitem [ref=e107]: ✓ Month-to-month commitment
+          - link "Get Started" [ref=e108] [cursor=pointer]:
+            - /url: "#contact"
+      - paragraph [ref=e109]:
+        - text: Not sure which you need? Start with
+        - link "Clarity" [ref=e110] [cursor=pointer]:
+          - /url: https://twobirds-kramerica.github.io/clarity/
+        - text: (it's free).
+    - generic [ref=e112]:
+      - heading "How We Work" [level=2] [ref=e113]
+      - paragraph [ref=e114]: Three steps from "where does AI even fit?" to working systems.
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - generic [ref=e117]: "1"
+          - heading "Start free" [level=3] [ref=e118]
+          - paragraph [ref=e119]:
+            - text: Run
+            - link "Clarity" [ref=e120] [cursor=pointer]:
+              - /url: https://twobirds-kramerica.github.io/clarity/
+            - text: ", our free AI diagnostic, or book a free conversation. See where you stand with AI, with no commitment."
+        - generic [ref=e121]:
+          - generic [ref=e122]: "2"
+          - heading "Get the map" [level=3] [ref=e123]
+          - paragraph [ref=e124]: "The AI Workflow Audit: a 30-day review that maps your operations, finds the AI opportunities that matter most, and delivers a prioritized action plan."
+        - generic [ref=e125]:
+          - generic [ref=e126]: "3"
+          - heading "Build it together" [level=3] [ref=e127]
+          - paragraph [ref=e128]: "Fractional AI Leadership: hands-on execution, one day a week, turning the plan into working systems. Month to month."
+    - generic [ref=e130]:
+      - heading "Work With Aaron" [level=2] [ref=e131]
+      - paragraph [ref=e132]: 20 years of senior product management. Most recently at TELUS as Senior Product Manager for Koodo Internet. Now helping Southwestern Ontario businesses and institutions integrate AI into their operations, one focused day per week.
+      - paragraph [ref=e133]: Every product in the Two Birds stack ships with automated weekly quality monitoring, monthly five-layer production readiness reviews, and continuous accessibility checks. The same operational rigour is applied to client work.
+      - paragraph [ref=e134]: Product Management • AI Integration • Digital Transformation
+      - link "View Consulting Profile →" [ref=e135] [cursor=pointer]:
+        - /url: https://twobirds-kramerica.github.io/aaron-patzalek/
+    - generic [ref=e137]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e138]
+      - generic [ref=e139]:
+        - group [ref=e140]:
+          - generic "How is this different from hiring a full-time AI person? −" [ref=e141] [cursor=pointer]
+          - paragraph [ref=e142]: You get senior PM execution one day per week without the overhead of a full-time hire. Month-to-month commitment.
+        - group [ref=e143]:
+          - generic "What size of business do you work with? +" [ref=e144] [cursor=pointer]
+        - group [ref=e145]:
+          - generic "How quickly can we get started? +" [ref=e146] [cursor=pointer]
+        - group [ref=e147]:
+          - generic "Do I need to know anything about AI? +" [ref=e148] [cursor=pointer]
+        - group [ref=e149]:
+          - generic "What does fractional mean? +" [ref=e150] [cursor=pointer]
+    - generic [ref=e152]:
+      - heading "Let's Talk" [level=2] [ref=e153]
+      - paragraph [ref=e154]: Ready to explore what AI can do for your business or institution?
+      - link "Book a Free Call" [ref=e155] [cursor=pointer]:
+        - /url: https://calendly.com/twobirdsinnovation/30min
+      - paragraph [ref=e156]: Aaron Patzalek · St. Thomas, Ontario
+      - paragraph [ref=e158]:
+        - link "aaron.patzalek@gmail.com" [ref=e159] [cursor=pointer]:
+          - /url: mailto:aaron.patzalek@gmail.com
+        - text: ·
+        - link "519-933-9294" [ref=e160] [cursor=pointer]:
+          - /url: tel:519-933-9294
+        - text: ·
+        - link "LinkedIn" [ref=e161] [cursor=pointer]:
+          - /url: https://linkedin.com/in/aaronpatzalek
+  - contentinfo [ref=e162]:
+    - paragraph [ref=e164]:
+      - text: © 2026 Two Birds Innovation · St. Thomas, Ontario ·
+      - link "Consulting" [ref=e165] [cursor=pointer]:
+        - /url: consulting.html
+      - text: ·
+      - link "Privacy Policy" [ref=e166] [cursor=pointer]:
+        - /url: privacy.html
+      - text: ·
+      - link "Consulting Profile" [ref=e167] [cursor=pointer]:
+        - /url: https://twobirds-kramerica.github.io/aaron-patzalek/
+      - text: ·
+      - link "LinkedIn" [ref=e168] [cursor=pointer]:
+        - /url: https://linkedin.com/in/aaronpatzalek
