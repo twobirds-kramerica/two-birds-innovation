@@ -3,483 +3,622 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Birds Innovation: AI Strategy and Digital Tools for Ontario</title>
-    <meta name="description" content="Two Birds Innovation builds AI strategy and digital tools for libraries, municipalities, and SMEs across Southwestern Ontario. Fractional product leadership and purpose-built platforms.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://twobirds-kramerica.github.io/two-birds-innovation/">
-    <meta property="og:title" content="Two Birds Innovation: AI Strategy and Digital Tools for Ontario">
-    <meta property="og:description" content="Fractional AI leadership and purpose-built digital platforms for libraries, municipalities, and SMEs across Southwestern Ontario.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://twobirds-kramerica.github.io/two-birds-innovation/">
-    <meta property="og:locale" content="en_CA">
-    <meta property="og:image" content="https://twobirds-kramerica.github.io/two-birds-innovation/images/og-card.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Two Birds Innovation: AI Strategy and Digital Tools for Ontario.">
-    <link rel="preload" href="fonts/space-grotesk/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/ibm-plex-sans/ibm-plex-sans-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/tokens.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script>
-    /* Pre-paint theme restore: prevents a light flash for dark-theme users. */
-    (function () {
-        try {
-            var t = localStorage.getItem('tbi-theme');
-            if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); }
-        } catch (e) {}
-    })();
-    </script>
+    <title>Two Birds Innovation: I find the real problem, then I ship the tool that fixes it</title>
+    <meta name="description" content="Two Birds Innovation is a one-person AI and operations studio in St. Thomas, Ontario. Diagnosis first, then working software, then a clean handoff. Proof: the Digital Confidence Centre, Clarity, and Career Coach, all designed and built here.">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        /* ============================================================
+           Two Birds Innovation, v2 lab
+           Brand: Two Birds Blue #0066CC, Deep Navy #0D1B2A, chevrons.
+           Fonts: Space Grotesk (headings) + IBM Plex Sans (body),
+           served locally from ./fonts/, no CDN. System fallbacks.
+           ============================================================ */
 
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How is this different from hiring a full-time AI person?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You get senior PM execution one day per week without the overhead of a full-time hire. Month-to-month commitment."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What size of business do you work with?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Typically 5-100 employees in Southwestern Ontario. Manufacturing, professional services, trades, non-profit."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How quickly can we get started?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The audit starts within one week of signing. Report delivered in 30 days."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do I need to know anything about AI?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. That is what I am for."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What does fractional mean?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "One dedicated day per week, focused entirely on your business. You get the outcomes without the full-time cost."
-                }
-            }
-        ]
-    }
-    </script>
+        @font-face {
+            font-family: 'Space Grotesk';
+            src: url('fonts/space-grotesk/space-grotesk-latin.woff2') format('woff2');
+            font-weight: 300 700;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            src: url('fonts/ibm-plex-sans/ibm-plex-sans-var-latin.woff2') format('woff2');
+            font-weight: 100 700;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            src: url('fonts/ibm-plex-sans/ibm-plex-sans-italic-var-latin.woff2') format('woff2');
+            font-weight: 100 700;
+            font-style: italic;
+            font-display: swap;
+        }
 
-    <!-- LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Two Birds Innovation",
-        "founder": {
-            "@type": "Person",
-            "name": "Aaron Patzalek"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "St. Thomas",
-            "addressRegion": "ON",
-            "addressCountry": "CA"
-        },
-        "description": "AI strategy, fractional product leadership, and purpose-built digital tools for libraries, municipalities, and SMEs across Southwestern Ontario.",
-        "priceRange": "$2,500 - $4,000/month",
-        "email": "aaron.patzalek@gmail.com",
-        "telephone": "519-933-9294"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Two Birds Innovation",
-        "url": "https://twobirds-kramerica.github.io/two-birds-innovation/",
-        "founder": { "@type": "Person", "name": "Aaron Patzalek" },
-        "foundingLocation": { "@type": "Place", "name": "St. Thomas, Ontario, Canada" },
-        "description": "Two Birds Innovation builds free and low-cost digital tools for Canadians, including digital literacy education for seniors and AI readiness diagnostics for small businesses, and provides fractional AI and product leadership to libraries, municipalities, and SMEs in Southwestern Ontario.",
-        "owns": [
-            {
-                "@type": "WebApplication",
-                "name": "Digital Confidence Centre",
-                "url": "https://twobirds-kramerica.github.io/digital-confidence/",
-                "applicationCategory": "EducationalApplication",
-                "description": "Free digital literacy programme for Canadian seniors: 30 self-paced modules on online safety, scam protection, banking, video calls, and AI, plus caregiver-led activities for children aged 4 to 15. No account required.",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Clarity",
-                "url": "https://twobirds-kramerica.github.io/clarity/",
-                "applicationCategory": "BusinessApplication",
-                "description": "Free AI readiness diagnostic for Canadian small businesses: answer a few questions and receive a personalised SWOT analysis, priority recommendations, and a concrete next step, benchmarked against 15 Canadian industries.",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "KevsCasa",
-                "applicationCategory": "LifestyleApplication",
-                "description": "Apartment-search shortlist tool that ranks rental listings by commute, neighbourhood safety, and total monthly cost. Currently in private use ahead of a public release."
-            }
-        ]
-    }
-    </script>
+        :root {
+            color-scheme: light;
+            --blue: #0066CC;
+            --blue-deep: #004C99;
+            --navy: #0D1B2A;
+            --ink: #1a2836;
+            --ink-soft: #43566b;
+            --paper: #fbfaf7;
+            --card: #ffffff;
+            --line: #e3e0d8;
+            --teal: #00695f;
+            --heading: 'Space Grotesk', -apple-system, 'Segoe UI', sans-serif;
+            --body: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+            --max: 68rem;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition: none !important; animation: none !important; }
+        }
+
+        body {
+            font-family: var(--body);
+            font-size: 1.0625rem;
+            line-height: 1.65;
+            color: var(--ink);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 { font-family: var(--heading); color: var(--navy); line-height: 1.15; letter-spacing: -0.015em; }
+
+        a { color: var(--blue-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+        a:hover { color: var(--blue); }
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--navy);
+            color: #fff;
+            padding: 0.75rem 1.25rem;
+            z-index: 100;
+        }
+        .skip-link:focus { left: 0.5rem; top: 0.5rem; }
+
+        .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+
+        /* ---------- header ---------- */
+        .site-header {
+            border-bottom: 1px solid var(--line);
+            background: var(--paper);
+        }
+        .site-header .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 1.1rem;
+            padding-bottom: 1.1rem;
+            flex-wrap: wrap;
+        }
+        .wordmark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--heading);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 0.01em;
+        }
+        .wordmark:hover { color: var(--navy); }
+        .chev-mark {
+            display: inline-grid;
+            place-items: center;
+            width: 2.1rem;
+            height: 2.1rem;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 6px;
+            font-family: var(--heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            line-height: 1;
+            letter-spacing: -0.05em;
+        }
+        .site-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+        .site-nav a {
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: var(--ink-soft);
+            text-decoration: none;
+        }
+        .site-nav a:hover { color: var(--blue-deep); text-decoration: underline; }
+
+        /* ---------- hero ---------- */
+        .hero { padding: 4.5rem 0 4rem; }
+        .hero .kicker {
+            font-family: var(--heading);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--blue-deep);
+            margin-bottom: 1.25rem;
+        }
+        .hero .kicker::before { content: '\003E\003E\00A0\00A0'; color: var(--blue); letter-spacing: -0.1em; margin-right: 0.4em; }
+        .hero h1 {
+            font-size: clamp(2rem, 5.5vw, 3.4rem);
+            font-weight: 700;
+            max-width: 21ch;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 em { font-style: normal; color: var(--blue); }
+        .hero .lede {
+            font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+            color: var(--ink-soft);
+            max-width: 54ch;
+            margin-bottom: 2.25rem;
+        }
+        .cta-row { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center; }
+        .btn {
+            display: inline-block;
+            font-family: var(--heading);
+            font-weight: 600;
+            font-size: 0.98rem;
+            padding: 0.85rem 1.6rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        .btn-primary { background: var(--blue); color: #fff; }
+        .btn-primary:hover { background: var(--blue-deep); color: #fff; }
+        .btn-ghost { color: var(--navy); border: 1.5px solid var(--navy); background: transparent; }
+        .btn-ghost:hover { background: var(--navy); color: #fff; }
+
+        .hero-honest {
+            margin-top: 3rem;
+            padding: 1.1rem 1.4rem;
+            border-left: 4px solid var(--blue);
+            background: #fff;
+            border-radius: 0 8px 8px 0;
+            max-width: 46rem;
+            font-size: 0.98rem;
+            color: var(--ink-soft);
+        }
+        .hero-honest strong { color: var(--navy); }
+
+        /* ---------- section scaffolding ---------- */
+        section { padding: 4rem 0; }
+        .sec-head { margin-bottom: 2.5rem; max-width: 46rem; }
+        .sec-head .kicker {
+            font-family: var(--heading);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--blue-deep);
+            margin-bottom: 0.75rem;
+        }
+        .sec-head .kicker::before { content: '\003E\00A0'; color: var(--blue); }
+        .sec-head h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); margin-bottom: 0.9rem; }
+        .sec-head p { color: var(--ink-soft); }
+
+        /* ---------- what I do ---------- */
+        .band { background: var(--navy); color: #dbe4ee; }
+        .band .sec-head h2 { color: #fff; }
+        .band .sec-head .kicker { color: #7db4e8; }
+        .band .sec-head .kicker::before { color: #7db4e8; }
+        .band .sec-head p { color: #a8b8c9; }
+        .three-col {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 760px) { .three-col { grid-template-columns: repeat(3, 1fr); } }
+        .do-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 1.75rem 1.5rem;
+        }
+        .do-card .step {
+            font-family: var(--heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: #7db4e8;
+            margin-bottom: 0.9rem;
+        }
+        .do-card h3 { color: #fff; font-size: 1.25rem; margin-bottom: 0.7rem; }
+        .do-card p { font-size: 0.97rem; color: #b9c6d4; }
+
+        /* ---------- shelf / case studies ---------- */
+        .case-list { display: grid; gap: 1.5rem; }
+        .case {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 2rem 1.75rem;
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 820px) { .case { grid-template-columns: 16rem 1fr; } }
+        .case-id { border-left: 3px solid var(--blue); padding-left: 1rem; align-self: start; }
+        .case-id .tag {
+            font-family: var(--heading);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--teal);
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .case-id h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+        .case-id .status { font-size: 0.85rem; color: var(--ink-soft); }
+        .case-body dl { display: grid; gap: 0.9rem; }
+        .case-body dt {
+            font-family: var(--heading);
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--blue-deep);
+        }
+        .case-body dt::before { content: '\003E\00A0'; color: var(--blue); }
+        .case-body dd { font-size: 0.98rem; color: var(--ink); margin-bottom: 0.3rem; }
+        .case-body .case-link { font-weight: 600; font-size: 0.95rem; }
+
+        .shelf-note {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            max-width: 52rem;
+        }
+
+        /* ---------- how we'd work ---------- */
+        .work-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+        @media (min-width: 760px) { .work-grid { grid-template-columns: 1fr 1fr; } }
+        .work-card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 2rem 1.75rem;
+        }
+        .work-card.lead-card { border-top: 4px solid var(--blue); }
+        .work-card h3 { font-size: 1.3rem; margin-bottom: 0.35rem; }
+        .work-card .model {
+            font-family: var(--heading);
+            font-size: 0.85rem;
+            color: var(--teal);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .work-card ul { list-style: none; display: grid; gap: 0.6rem; margin-bottom: 0; }
+        .work-card li { padding-left: 1.4rem; position: relative; font-size: 0.97rem; }
+        .work-card li::before {
+            content: '\003E';
+            position: absolute;
+            left: 0;
+            color: var(--blue);
+            font-family: var(--heading);
+            font-weight: 700;
+        }
+        .work-plain {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            font-size: 0.97rem;
+            color: var(--ink-soft);
+            max-width: 52rem;
+        }
+        .work-plain strong { color: var(--navy); }
+
+        /* ---------- contact ---------- */
+        .contact { padding-bottom: 5rem; }
+        .contact-inner {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--card);
+            padding: 2.5rem 1.75rem;
+            max-width: 46rem;
+        }
+        .contact-inner h2 { font-size: 1.7rem; margin-bottom: 0.9rem; }
+        .contact-inner p { color: var(--ink-soft); margin-bottom: 1.5rem; max-width: 46ch; }
+        .contact-lines { list-style: none; display: grid; gap: 0.55rem; font-size: 1rem; }
+        .contact-lines li::before { content: '\003E\00A0'; color: var(--blue); font-family: var(--heading); font-weight: 700; }
+
+        /* ---------- footer ---------- */
+        .site-footer {
+            border-top: 1px solid var(--line);
+            padding: 2rem 0 2.5rem;
+            font-size: 0.88rem;
+            color: var(--ink-soft);
+        }
+        .site-footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+        .foot-chev { font-family: var(--heading); color: var(--blue); font-weight: 700; letter-spacing: -0.05em; }
+    </style>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
     <header class="site-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 20c4-7 9-10 13-10-1 4-4 9-13 10z"/>
-                    <path d="M15 24c3-5 7-8 10-8-1 3-3 7-10 8z"/>
-                </svg>
+        <div class="wrap">
+            <a href="#main" class="wordmark">
+                <span class="chev-mark" aria-hidden="true">&gt;&lt;</span>
                 Two Birds Innovation
             </a>
-            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-                <a href="#products">Products</a>
-                <a href="#serve">Who We Serve</a>
-                <a href="#services">Services</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact" class="nav-cta">Contact</a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#what-i-do">What I do</a>
+                <a href="#shelf">The work</a>
+                <a href="#working-together">Working together</a>
+                <a href="#contact">Contact</a>
             </nav>
-            <div class="header-controls">
-                <button class="theme-toggle" type="button" aria-label="Toggle dark theme" aria-pressed="false">
-                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>
-                    </svg>
-                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="4"/>
-                        <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-                    </svg>
-                </button>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
-            </div>
         </div>
     </header>
 
     <main id="main">
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-split">
-                <div class="hero-content">
-                    <p class="eyebrow hero-eyebrow">Two Birds Innovation</p>
-                    <h1>AI strategy and digital tools that work <span class="accent-word">outside the tech corridor</span></h1>
-                    <p class="hero-sub">Fractional product leadership and purpose-built platforms for libraries, municipalities, and SMEs across Southwestern Ontario.</p>
-                    <div class="hero-cta">
-                        <a href="https://calendly.com/twobirdsinnovation/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a discovery call &rarr;</a>
-                        <a href="#products" class="btn btn-ghost-dark">See our products</a>
+        <!-- ================= HERO ================= -->
+        <section class="hero" aria-labelledby="hero-h">
+            <div class="wrap">
+                <p class="kicker">A one-person AI and operations studio &middot; St. Thomas, Ontario</p>
+                <h1 id="hero-h">I find the real problem. Then I <em>ship the tool</em> that fixes it.</h1>
+                <p class="lede">
+                    Most consultants hand you a report and leave the hard part to you.
+                    Two Birds does the diagnosis, then builds the working software, then hands it
+                    off so it runs without me. Twenty years of operations and product leadership,
+                    plus a shelf of live products to prove the build side is real.
+                </p>
+                <div class="cta-row">
+                    <a class="btn btn-primary" href="#shelf">See the shipped work</a>
+                    <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+                </div>
+                <p class="hero-honest">
+                    <strong>Honest scope:</strong> Two Birds is one person, Aaron Patzalek, with an
+                    AI-assisted build system behind him. That means senior judgment on every decision
+                    and no junior staff learning on your invoice. It also means I take on a small
+                    number of engagements at a time, and I will tell you if your problem is not one
+                    I should solve.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= WHAT I DO ================= -->
+        <section id="what-i-do" class="band" aria-labelledby="what-h">
+            <div class="wrap">
+                <div class="sec-head">
+                    <p class="kicker">What I do</p>
+                    <h2 id="what-h">Diagnose. Build. Hand off cleanly.</h2>
+                    <p>The same loop every time, whether the engagement is two weeks or six months.</p>
+                </div>
+                <div class="three-col">
+                    <div class="do-card">
+                        <p class="step">01 &middot; Diagnose</p>
+                        <h3>Find the actual problem</h3>
+                        <p>
+                            I have entered a new industry with zero domain experience more times than
+                            most people change jobs: retail, print, telecom, eCommerce, non-profit.
+                            The skill that transfers is framing. Before anything gets built, we agree
+                            in plain language on what is actually broken and what fixing it is worth.
+                        </p>
                     </div>
-                    <div class="hero-meta">
-                        <span>
-                            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                            St. Thomas, Ontario
-                        </span>
-                        <span>
-                            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                            20 years of senior product management
-                        </span>
-                        <span>
-                            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                            Free products, no login, no data collected
-                        </span>
+                    <div class="do-card">
+                        <p class="step">02 &middot; Build</p>
+                        <h3>Ship working software</h3>
+                        <p>
+                            Not a slide deck about software. Small, focused tools that solve the
+                            diagnosed problem: intake forms that actually route, checklists that
+                            actually get used, diagnostics your customers can run themselves.
+                            Built lean, tested against the live thing, delivered working.
+                        </p>
+                    </div>
+                    <div class="do-card">
+                        <p class="step">03 &middot; Hand off</p>
+                        <h3>Leave you owning it</h3>
+                        <p>
+                            Everything ships with plain-language documentation, no proprietary lock-in,
+                            and no dependency on me to keep running. You get the source, the hosting,
+                            and the keys. If you never call me again and the tool still works, the
+                            engagement succeeded.
+                        </p>
                     </div>
                 </div>
-                <div class="hero-media" aria-hidden="true">
-                    <div class="hero-browser">
-                        <div class="hero-browser-bar">
-                            <span class="hero-browser-dot"></span>
-                            <span class="hero-browser-dot"></span>
-                            <span class="hero-browser-dot"></span>
+            </div>
+        </section>
+
+        <!-- ================= THE SHIPPED SHELF ================= -->
+        <section id="shelf" aria-labelledby="shelf-h">
+            <div class="wrap">
+                <div class="sec-head">
+                    <p class="kicker">The work</p>
+                    <h2 id="shelf-h">The shipped shelf</h2>
+                    <p>
+                        Three live products, each designed and built end to end by Two Birds.
+                        Our first client was ourselves: these are the case studies. Every one is
+                        free to use right now, so you can judge the work directly instead of
+                        taking my word for it.
+                    </p>
+                </div>
+
+                <div class="case-list">
+
+                    <article class="case" aria-labelledby="case-dcc">
+                        <div class="case-id">
+                            <span class="tag">Digital literacy</span>
+                            <h3 id="case-dcc">Digital Confidence Centre</h3>
+                            <p class="status">Live &middot; free &middot; no account required</p>
                         </div>
-                        <div class="hero-browser-body">
-                            <p class="hero-mockup-label">Digital Confidence Centre</p>
-                            <p class="hero-mockup-module">Module 1: The Escape Hatch</p>
-                            <div class="hero-mockup-progress">
-                                <div class="hero-mockup-progress-fill"></div>
-                            </div>
-                            <div class="hero-mockup-line"></div>
-                            <div class="hero-mockup-line short"></div>
-                            <div class="hero-mockup-line"></div>
-                            <div class="hero-mockup-step-row">
-                                <div class="hero-mockup-step done"></div>
-                                <div class="hero-mockup-step done"></div>
-                                <div class="hero-mockup-step current"></div>
-                                <div class="hero-mockup-step"></div>
-                                <div class="hero-mockup-step"></div>
-                            </div>
+                        <div class="case-body">
+                            <dl>
+                                <dt>The problem</dt>
+                                <dd>
+                                    Canadian seniors are the primary target of online scams, and most
+                                    digital literacy material talks down to them or requires sign-ups
+                                    they do not trust.
+                                </dd>
+                                <dt>What was built</dt>
+                                <dd>
+                                    A free self-paced digital literacy platform: 29 adult modules
+                                    covering scam protection, online banking, video calls, and AI,
+                                    plus 25 or more caregiver-led activities for kids. Accessible design,
+                                    no login, no data collected.
+                                </dd>
+                                <dt>Why it matters as proof</dt>
+                                <dd>
+                                    It shows the full loop on a hard audience: diagnosing what actually
+                                    blocks seniors, building for accessibility rather than around it,
+                                    and shipping something a library can hand to a patron today.
+                                </dd>
+                            </dl>
+                            <p><a class="case-link" href="https://twobirds-kramerica.github.io/digital-confidence/" target="_blank" rel="noopener">Explore the Digital Confidence Centre</a></p>
                         </div>
+                    </article>
+
+                    <article class="case" aria-labelledby="case-clarity">
+                        <div class="case-id">
+                            <span class="tag">AI readiness diagnostic</span>
+                            <h3 id="case-clarity">Clarity</h3>
+                            <p class="status">Live &middot; free &middot; no sign-up</p>
+                        </div>
+                        <div class="case-body">
+                            <dl>
+                                <dt>The problem</dt>
+                                <dd>
+                                    Small business owners keep being told to "adopt AI" with no honest
+                                    starting point that is not a sales funnel for someone's product.
+                                </dd>
+                                <dt>What was built</dt>
+                                <dd>
+                                    A free 15-minute diagnostic that maps where AI actually fits your
+                                    business: a personalised SWOT, priority recommendations, and one
+                                    concrete next step, benchmarked against 15 Canadian industries.
+                                </dd>
+                                <dt>Why it matters as proof</dt>
+                                <dd>
+                                    Clarity is the diagnose step of my own consulting process, turned
+                                    into a tool anyone can run without paying me. If you want to see
+                                    how I think about your business, run it.
+                                </dd>
+                            </dl>
+                            <p><a class="case-link" href="https://twobirds-kramerica.github.io/clarity/" target="_blank" rel="noopener">Run Clarity, it is free</a></p>
+                        </div>
+                    </article>
+
+                    <article class="case" aria-labelledby="case-cc">
+                        <div class="case-id">
+                            <span class="tag">Job search tooling</span>
+                            <h3 id="case-cc">Career Coach</h3>
+                            <p class="status">Live &middot; free &middot; your data stays in your browser</p>
+                        </div>
+                        <div class="case-body">
+                            <dl>
+                                <dt>The problem</dt>
+                                <dd>
+                                    Job seekers burn hours tailoring applications blind, with no honest
+                                    read on fit, and most tools want their data on someone else's server.
+                                </dd>
+                                <dt>What was built</dt>
+                                <dd>
+                                    An AI-powered job application tool: it analyses your CV against real
+                                    postings and scores ATS match, fit, salary alignment, and AI
+                                    displacement risk. Everything runs in your browser with your own
+                                    API key. Nothing is stored on a server.
+                                </dd>
+                                <dt>Why it matters as proof</dt>
+                                <dd>
+                                    Privacy-first architecture as a design decision, not a compliance
+                                    afterthought. The same sovereignty standard is applied to anything
+                                    built for a client.
+                                </dd>
+                            </dl>
+                            <p><a class="case-link" href="https://twobirds-kramerica.github.io/career-coach/" target="_blank" rel="noopener">Try Career Coach</a></p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="shelf-note">
+                    Plain disclosure: these products were built for real users, but they are
+                    self-initiated, not paid client engagements. That is exactly why they are on
+                    this page. They prove the design-and-build claim with something you can click,
+                    which a testimonial cannot.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= WORKING TOGETHER ================= -->
+        <section id="working-together" aria-labelledby="work-h">
+            <div class="wrap">
+                <div class="sec-head">
+                    <p class="kicker">Working together</p>
+                    <h2 id="work-h">How we'd work together</h2>
+                    <p>Two simple models. No packages, no tiers, no lock-in.</p>
+                </div>
+                <div class="work-grid">
+                    <div class="work-card lead-card">
+                        <h3>Project-based</h3>
+                        <p class="model">Pay as you go &middot; where most engagements start</p>
+                        <ul>
+                            <li>A defined problem, a fixed scope, a working deliverable</li>
+                            <li>Diagnosis first: we agree on the real problem before anything is built</li>
+                            <li>Typical shape: a focused audit, or a small tool designed, built, and handed off</li>
+                            <li>You own everything at the end, including the source</li>
+                        </ul>
+                    </div>
+                    <div class="work-card">
+                        <h3>Retainer, as you grow</h3>
+                        <p class="model">Ongoing &middot; when the first project earns it</p>
+                        <ul>
+                            <li>A dedicated slice of every week for your operation</li>
+                            <li>Strategy and execution together: the plan and the shipping</li>
+                            <li>Month to month, no long contracts</li>
+                            <li>Only offered after a project, so we both know it is a fit</li>
+                        </ul>
                     </div>
                 </div>
+                <p class="work-plain">
+                    <strong>On pricing:</strong> project work is quoted as a fixed price against the
+                    agreed scope, so there is no meter running. If a conversation makes it clear that
+                    you do not need me, I will say so, and the conversation costs nothing.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Products -->
-    <section id="products" class="section">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Products</p>
-                <h2>What We Have Built</h2>
-                <p class="section-sub">Production platforms already in use by libraries and community organizations across Canada. No login required. No data collected.</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card product-card-dcc">
-                    <p class="product-card-label">Digital Literacy Platform</p>
-                    <h3>Digital Confidence Centre</h3>
-                    <p>Free digital literacy for Canadian communities. 29 adult modules, 25+ kids activities, library-ready outcome measurement, and NHSP grant-compatible delivery.</p>
-                    <a href="https://twobirds-kramerica.github.io/digital-confidence/" class="product-link" target="_blank" rel="noopener">Explore DCC &rarr;</a>
-                </div>
-                <div class="product-card product-card-clarity">
-                    <p class="product-card-label">AI Business Diagnostic</p>
-                    <h3>Clarity</h3>
-                    <p>15-minute diagnostic that maps your AI priorities, identifies your biggest gaps, and produces a concrete action plan. No sign-up, no API key required to try.</p>
-                    <a href="https://twobirds-kramerica.github.io/clarity/" class="product-link" target="_blank" rel="noopener">Try Clarity free &rarr;</a>
-                </div>
-                <div class="product-card product-card-kevcasa">
-                    <p class="product-card-label">Rental Intelligence</p>
-                    <h3>KevsCasa</h3>
-                    <p>Apartment search with ranked listings, neighbourhood safety scores, commute estimates, and contact tracking. Configurable for settlement agencies and housing non-profits.</p>
-                    <a href="https://kevscasa.pages.dev/" class="product-link" target="_blank" rel="noopener">View KevsCasa &rarr;</a>
-                </div>
-            </div>
-            <p class="lab-strip">
-                <span class="lab-badge">In development</span>
-                <strong>Norm</strong>
-                <span>A Canadian tech-readiness diagnostic for regulated professionals, starting with financial advisers. Sourced Canadian benchmarks, honest provenance, no account required.</span>
-            </p>
-        </div>
-    </section>
-
-    <!-- Who We Serve -->
-    <section id="serve" class="section section-tint">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Audiences</p>
-                <h2>Who We Work With</h2>
-            </div>
-            <div class="serve-grid">
-                <div class="serve-item">
-                    <svg class="serve-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
-                    </svg>
-                    <p class="serve-label">Libraries and non-profits</p>
-                    <p class="serve-desc">Digital literacy program delivery, facilitator training, NHSP and Canada Digital Adoption Program grant support.</p>
-                </div>
-                <div class="serve-item">
-                    <svg class="serve-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/>
-                    </svg>
-                    <p class="serve-label">Small and medium businesses</p>
-                    <p class="serve-desc">AI workflow audits and fractional product leadership for 5-100 employee companies in manufacturing, professional services, and trades.</p>
-                </div>
-                <div class="serve-item">
-                    <svg class="serve-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/>
-                    </svg>
-                    <p class="serve-label">Municipalities and Crown corps</p>
-                    <p class="serve-desc">Resident-facing digital tools, AODA-compliant design, and community program delivery at scale.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="section services">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Services</p>
-                <h2>Two Ways to Work Together</h2>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>AI Workflow Audit</h3>
-                    <div class="price">$2,500</div>
-                    <span class="price-term">flat fee</span>
-                    <ul>
-                        <li>30-day engagement</li>
-                        <li>Full operations review</li>
-                        <li>AI opportunity mapping</li>
-                        <li>Prioritized action plan</li>
-                        <li>Executive summary report</li>
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="contact" aria-labelledby="contact-h">
+            <div class="wrap">
+                <div class="contact-inner">
+                    <h2 id="contact-h">Low-key by design</h2>
+                    <p>
+                        No forms, no funnels, no newsletter pop-up. If something here sounds like
+                        your problem, get in touch and we will talk it through.
+                    </p>
+                    <ul class="contact-lines">
+                        <li>Email: <a href="mailto:aaron.patzalek@gmail.com">aaron.patzalek@gmail.com</a></li>
+                        <li>Book a call: <a href="https://calendly.com/twobirdsinnovation/30min" target="_blank" rel="noopener">30 minutes, free, no obligation</a></li>
+                        <li>LinkedIn: <a href="https://linkedin.com/in/aaronpatzalek" target="_blank" rel="noopener">Aaron Patzalek</a></li>
+                        <li>St. Thomas, Ontario, Canada</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Start an Audit</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="featured-badge">Recommended</div>
-                    <h3>Fractional AI Leadership</h3>
-                    <div class="price">$4,000</div>
-                    <span class="price-term">per month</span>
-                    <ul>
-                        <li>One dedicated day per week</li>
-                        <li>AI strategy and execution</li>
-                        <li>Product development</li>
-                        <li>Team coaching and workshops</li>
-                        <li>Month-to-month commitment</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
-            <p class="services-note">Not sure which you need? Start with <a href="https://twobirds-kramerica.github.io/clarity/" target="_blank" rel="noopener">Clarity</a> (it's free).</p>
-
-            <figure class="case-study">
-                <blockquote>
-                    <p class="case-study__headline">Our first client was ourselves.</p>
-                    <p>In about three months, Two Birds built and now runs seven live products on a custom AI operations platform: the same practical, owned AI infrastructure we build for clients. It pulls work from a backlog, executes it, tests every change, and reports back, without a person in the room. If you want to see the approach before you hire it, it is already running.</p>
-                </blockquote>
-                <figcaption>Aaron Patzalek, Two Birds Innovation</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- How We Work -->
-    <section id="how-we-work" class="section section-tint how-we-work">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Process</p>
-                <h2>How We Work</h2>
-                <p class="steps-lead">Three steps from "where does AI even fit?" to working systems.</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Start free</h3>
-                    <p>Run <a href="https://twobirds-kramerica.github.io/clarity/" target="_blank" rel="noopener">Clarity</a>, our free AI diagnostic, or book a free conversation. See where you stand with AI, with no commitment.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Get the map</h3>
-                    <p>The AI Workflow Audit: a 30-day review that maps your operations, finds the AI opportunities that matter most, and delivers a prioritized action plan.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Build it together</h3>
-                    <p>Fractional AI Leadership: hands-on execution, one day a week, turning the plan into working systems. Month to month.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work With Us -->
-    <section id="work-with-us" class="section section-work-with-us">
-        <div class="container section-work-with-us__inner">
-            <div>
-                <p class="eyebrow">Founder</p>
-                <h2>Work With Aaron</h2>
-                <p class="section-work-with-us__bio">
-                    20 years of senior product management. Most recently at TELUS as Senior Product Manager for Koodo Internet. Now helping Southwestern Ontario businesses and institutions integrate AI into their operations, one focused day per week.
-                </p>
-                <p class="section-work-with-us__bio">
-                    Every product in the Two Birds stack ships with automated weekly quality monitoring, monthly five-layer production readiness reviews, and continuous accessibility checks. The same operational rigour is applied to client work.
-                </p>
-                <p class="section-work-with-us__skills">
-                    <span class="skill-chip">Product Management</span>
-                    <span class="skill-chip">AI Integration</span>
-                    <span class="skill-chip">Digital Transformation</span>
-                </p>
-                <a href="https://twobirds-kramerica.github.io/aaron-patzalek/" target="_blank" rel="noopener" class="btn btn-outline">View Consulting Profile &rarr;</a>
-            </div>
-            <aside class="work-aside" aria-label="Track record at a glance">
-                <dl>
-                    <div>
-                        <dt>20 yrs</dt>
-                        <dd>Senior product management, most recently at TELUS</dd>
-                    </div>
-                    <div>
-                        <dt>7</dt>
-                        <dd>Live products built and operated by Two Birds</dd>
-                    </div>
-                    <div>
-                        <dt>Weekly</dt>
-                        <dd>Automated quality monitoring and accessibility checks on every product</dd>
-                    </div>
-                </dl>
-            </aside>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section section-tint faq">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Questions</p>
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-list">
-                <details class="faq-item" open>
-                    <summary>How is this different from hiring a full-time AI person?</summary>
-                    <p>You get senior PM execution one day per week without the overhead of a full-time hire. Month-to-month commitment.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What size of business do you work with?</summary>
-                    <p>Typically 5-100 employees in Southwestern Ontario. Manufacturing, professional services, trades, non-profit.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>How quickly can we get started?</summary>
-                    <p>The audit starts within one week of signing. Report delivered in 30 days.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Do I need to know anything about AI?</summary>
-                    <p>No. That is what I am for.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What does fractional mean?</summary>
-                    <p>One dedicated day per week, focused entirely on your business. You get the outcomes without the full-time cost.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="contact-panel">
-                <h2>Let's Talk</h2>
-                <p>Ready to explore what AI can do for your business or institution?</p>
-                <a href="https://calendly.com/twobirdsinnovation/30min" class="btn btn-primary btn-large" target="_blank" rel="noopener">
-                    Book a Free Call
-                </a>
-                <p class="contact-note">Aaron Patzalek &middot; St. Thomas, Ontario</p>
-                <div class="contact-details">
-                    <p><a href="mailto:aaron.patzalek@gmail.com">aaron.patzalek@gmail.com</a> &middot; <a href="tel:519-933-9294">519-933-9294</a> &middot; <a href="https://linkedin.com/in/aaronpatzalek" target="_blank" rel="noopener">LinkedIn</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Two Birds Innovation &middot; St. Thomas, Ontario</p>
-            <ul class="footer-links">
-                <li><a href="../consulting.html">Consulting</a></li>
-                <li><a href="../privacy.html">Privacy Policy</a></li>
-                <li><a href="https://twobirds-kramerica.github.io/aaron-patzalek/" target="_blank" rel="noopener">Consulting Profile</a></li>
-                <li><a href="https://linkedin.com/in/aaronpatzalek" target="_blank" rel="noopener">LinkedIn</a></li>
-            </ul>
+        <div class="wrap">
+            <p><span class="foot-chev" aria-hidden="true">&gt;&lt;</span> &copy; 2026 Two Birds Innovation &middot; St. Thomas, Ontario</p>
+            <p>Built by hand. Static HTML, no trackers, no cookies.</p>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
-  <script src="feedback-widget.js" defer></script>
 </body>
 </html>
