@@ -6,48 +6,34 @@
     <title>Two Birds Innovation: I find the real problem, then I ship the tool that fixes it</title>
     <meta name="description" content="Two Birds Innovation is a one-person AI and operations studio in St. Thomas, Ontario. Diagnosis first, then working software, then a clean handoff. Proof: the Digital Confidence Centre, Clarity, and Career Coach, all designed and built here.">
     <meta name="robots" content="noindex, nofollow">
+    <link rel="preload" href="fonts/space-grotesk/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ibm-plex-sans/ibm-plex-sans-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/tokens.css">
+    <script>
+    /* Pre-paint theme restore: prevents a light flash for dark-theme users. */
+    (function () {
+        try {
+            var t = localStorage.getItem('tbi-theme');
+            if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); }
+        } catch (e) {}
+    })();
+    </script>
     <style>
         /* ============================================================
-           Two Birds Innovation, v2 lab
-           Brand: Two Birds Blue #0066CC, Deep Navy #0D1B2A, chevrons.
+           Two Birds Innovation, v2 lab -- "Signal" identity.
+           Tokens (palette, dark mode, fonts): css/tokens.css.
            Fonts: Space Grotesk (headings) + IBM Plex Sans (body),
            served locally from ./fonts/, no CDN. System fallbacks.
+           Layout/content styles below use Signal token variables so
+           both light and dark themes resolve from one rule set.
            ============================================================ */
 
-        @font-face {
-            font-family: 'Space Grotesk';
-            src: url('fonts/space-grotesk/space-grotesk-latin.woff2') format('woff2');
-            font-weight: 300 700;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'IBM Plex Sans';
-            src: url('fonts/ibm-plex-sans/ibm-plex-sans-var-latin.woff2') format('woff2');
-            font-weight: 100 700;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'IBM Plex Sans';
-            src: url('fonts/ibm-plex-sans/ibm-plex-sans-italic-var-latin.woff2') format('woff2');
-            font-weight: 100 700;
-            font-style: italic;
-            font-display: swap;
-        }
-
         :root {
-            color-scheme: light;
-            --blue: #0066CC;
-            --blue-deep: #004C99;
-            --navy: #0D1B2A;
-            --ink: #1a2836;
-            --ink-soft: #43566b;
-            --paper: #fbfaf7;
-            --card: #ffffff;
-            --line: #e3e0d8;
-            --teal: #00695f;
-            --heading: 'Space Grotesk', -apple-system, 'Segoe UI', sans-serif;
-            --body: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+            --heading: var(--font-display);
+            --body: var(--font-body);
             --max: 68rem;
+            /* Text-safe teal on the always-navy band (11.5:1 on #0B1120) */
+            --accent-on-ink: #4EE0CB;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,17 +48,17 @@
             font-family: var(--body);
             font-size: 1.0625rem;
             line-height: 1.65;
-            color: var(--ink);
-            background: var(--paper);
+            color: var(--text);
+            background: var(--bg);
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3 { font-family: var(--heading); color: var(--navy); line-height: 1.15; letter-spacing: -0.015em; }
+        h1, h2, h3 { font-family: var(--heading); color: var(--text); line-height: 1.15; letter-spacing: -0.015em; }
 
-        a { color: var(--blue-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-        a:hover { color: var(--blue); }
+        a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+        a:hover { color: var(--link-hover); }
         a:focus-visible, button:focus-visible {
-            outline: 3px solid var(--blue);
+            outline: 3px solid var(--focus);
             outline-offset: 3px;
             border-radius: 2px;
         }
@@ -84,8 +70,8 @@
             position: absolute;
             left: -9999px;
             top: 0;
-            background: var(--navy);
-            color: #fff;
+            background: var(--ink-panel);
+            color: var(--text-on-ink);
             padding: 0.75rem 1.25rem;
             z-index: 100;
         }
@@ -95,8 +81,8 @@
 
         /* ---------- header ---------- */
         .site-header {
-            border-bottom: 1px solid var(--line);
-            background: var(--paper);
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
         }
         .site-header .wrap {
             display: flex;
@@ -114,18 +100,18 @@
             font-family: var(--heading);
             font-weight: 700;
             font-size: 1.05rem;
-            color: var(--navy);
+            color: var(--text);
             text-decoration: none;
             letter-spacing: 0.01em;
         }
-        .wordmark:hover { color: var(--navy); }
+        .wordmark:hover { color: var(--text); }
         .chev-mark {
             display: inline-grid;
             place-items: center;
             width: 2.1rem;
             height: 2.1rem;
-            background: var(--blue);
-            color: #fff;
+            background: var(--accent-bright);
+            color: var(--btn-text);
             border-radius: 6px;
             font-family: var(--heading);
             font-weight: 700;
@@ -133,14 +119,38 @@
             line-height: 1;
             letter-spacing: -0.05em;
         }
-        .site-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+        .site-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; }
         .site-nav a {
             font-size: 0.92rem;
             font-weight: 500;
-            color: var(--ink-soft);
+            color: var(--text-muted);
             text-decoration: none;
         }
-        .site-nav a:hover { color: var(--blue-deep); text-decoration: underline; }
+        .site-nav a:hover { color: var(--link); text-decoration: underline; }
+
+        /* ---------- theme toggle (Signal, restored) ---------- */
+        .theme-toggle {
+            appearance: none;
+            background: transparent;
+            border: 1px solid var(--border-strong);
+            border-radius: 999px;
+            color: var(--text);
+            width: 2.75rem;
+            height: 2.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+        .theme-toggle svg { width: 1.15rem; height: 1.15rem; }
+        .theme-toggle .icon-sun { display: none; }
+        :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+        :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+            :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+        }
 
         /* ---------- hero ---------- */
         .hero { padding: 4.5rem 0 4rem; }
@@ -150,20 +160,20 @@
             font-weight: 500;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--blue-deep);
+            color: var(--accent);
             margin-bottom: 1.25rem;
         }
-        .hero .kicker::before { content: '\003E\003E\00A0\00A0'; color: var(--blue); letter-spacing: -0.1em; margin-right: 0.4em; }
+        .hero .kicker::before { content: '\003E\003E\00A0\00A0'; color: var(--accent); letter-spacing: -0.1em; margin-right: 0.4em; }
         .hero h1 {
             font-size: clamp(2rem, 5.5vw, 3.4rem);
             font-weight: 700;
             max-width: 21ch;
             margin-bottom: 1.5rem;
         }
-        .hero h1 em { font-style: normal; color: var(--blue); }
+        .hero h1 em { font-style: normal; color: var(--accent); }
         .hero .lede {
             font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-            color: var(--ink-soft);
+            color: var(--text-muted);
             max-width: 54ch;
             margin-bottom: 2.25rem;
         }
@@ -178,22 +188,22 @@
             text-decoration: none;
             transition: background-color 0.15s ease, color 0.15s ease;
         }
-        .btn-primary { background: var(--blue); color: #fff; }
-        .btn-primary:hover { background: var(--blue-deep); color: #fff; }
-        .btn-ghost { color: var(--navy); border: 1.5px solid var(--navy); background: transparent; }
-        .btn-ghost:hover { background: var(--navy); color: #fff; }
+        .btn-primary { background: var(--accent-bright); color: var(--btn-text); }
+        .btn-primary:hover { background: #8FEEDF; color: var(--btn-text); }
+        .btn-ghost { color: var(--text); border: 1.5px solid var(--border-strong); background: transparent; }
+        .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
         .hero-honest {
             margin-top: 3rem;
             padding: 1.1rem 1.4rem;
-            border-left: 4px solid var(--blue);
-            background: #fff;
+            border-left: 4px solid var(--accent-bright);
+            background: var(--surface);
             border-radius: 0 8px 8px 0;
             max-width: 46rem;
             font-size: 0.98rem;
-            color: var(--ink-soft);
+            color: var(--text-muted);
         }
-        .hero-honest strong { color: var(--navy); }
+        .hero-honest strong { color: var(--text); }
 
         /* ---------- section scaffolding ---------- */
         section { padding: 4rem 0; }
@@ -204,19 +214,19 @@
             font-weight: 500;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--blue-deep);
+            color: var(--accent);
             margin-bottom: 0.75rem;
         }
-        .sec-head .kicker::before { content: '\003E\00A0'; color: var(--blue); }
+        .sec-head .kicker::before { content: '\003E\00A0'; color: var(--accent); }
         .sec-head h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); margin-bottom: 0.9rem; }
-        .sec-head p { color: var(--ink-soft); }
+        .sec-head p { color: var(--text-muted); }
 
         /* ---------- what I do ---------- */
-        .band { background: var(--navy); color: #dbe4ee; }
-        .band .sec-head h2 { color: #fff; }
-        .band .sec-head .kicker { color: #7db4e8; }
-        .band .sec-head .kicker::before { color: #7db4e8; }
-        .band .sec-head p { color: #a8b8c9; }
+        .band { background: var(--ink-panel); color: var(--muted-on-ink); }
+        .band .sec-head h2 { color: var(--text-on-ink); }
+        .band .sec-head .kicker { color: var(--accent-on-ink); }
+        .band .sec-head .kicker::before { color: var(--accent-on-ink); }
+        .band .sec-head p { color: var(--muted-on-ink); }
         .three-col {
             display: grid;
             gap: 1.25rem;
@@ -224,8 +234,8 @@
         }
         @media (min-width: 760px) { .three-col { grid-template-columns: repeat(3, 1fr); } }
         .do-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: var(--ink-panel-2);
+            border: 1px solid var(--border-on-ink);
             border-radius: 10px;
             padding: 1.75rem 1.5rem;
         }
@@ -234,17 +244,17 @@
             font-weight: 700;
             font-size: 0.85rem;
             letter-spacing: 0.1em;
-            color: #7db4e8;
+            color: var(--accent-on-ink);
             margin-bottom: 0.9rem;
         }
-        .do-card h3 { color: #fff; font-size: 1.25rem; margin-bottom: 0.7rem; }
-        .do-card p { font-size: 0.97rem; color: #b9c6d4; }
+        .do-card h3 { color: var(--text-on-ink); font-size: 1.25rem; margin-bottom: 0.7rem; }
+        .do-card p { font-size: 0.97rem; color: var(--muted-on-ink); }
 
         /* ---------- shelf / case studies ---------- */
         .case-list { display: grid; gap: 1.5rem; }
         .case {
-            background: var(--card);
-            border: 1px solid var(--line);
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 2rem 1.75rem;
             display: grid;
@@ -252,19 +262,19 @@
             grid-template-columns: 1fr;
         }
         @media (min-width: 820px) { .case { grid-template-columns: 16rem 1fr; } }
-        .case-id { border-left: 3px solid var(--blue); padding-left: 1rem; align-self: start; }
+        .case-id { border-left: 3px solid var(--accent-bright); padding-left: 1rem; align-self: start; }
         .case-id .tag {
             font-family: var(--heading);
             font-size: 0.75rem;
             font-weight: 500;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--teal);
+            color: var(--accent);
             display: block;
             margin-bottom: 0.4rem;
         }
         .case-id h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
-        .case-id .status { font-size: 0.85rem; color: var(--ink-soft); }
+        .case-id .status { font-size: 0.85rem; color: var(--text-muted); }
         .case-body dl { display: grid; gap: 0.9rem; }
         .case-body dt {
             font-family: var(--heading);
@@ -272,16 +282,16 @@
             font-size: 0.85rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--blue-deep);
+            color: var(--accent);
         }
-        .case-body dt::before { content: '\003E\00A0'; color: var(--blue); }
-        .case-body dd { font-size: 0.98rem; color: var(--ink); margin-bottom: 0.3rem; }
+        .case-body dt::before { content: '\003E\00A0'; color: var(--accent); }
+        .case-body dd { font-size: 0.98rem; color: var(--text); margin-bottom: 0.3rem; }
         .case-body .case-link { font-weight: 600; font-size: 0.95rem; }
 
         .shelf-note {
             margin-top: 2rem;
             font-size: 0.95rem;
-            color: var(--ink-soft);
+            color: var(--text-muted);
             max-width: 52rem;
         }
 
@@ -289,17 +299,17 @@
         .work-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
         @media (min-width: 760px) { .work-grid { grid-template-columns: 1fr 1fr; } }
         .work-card {
-            background: var(--card);
-            border: 1px solid var(--line);
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 2rem 1.75rem;
         }
-        .work-card.lead-card { border-top: 4px solid var(--blue); }
+        .work-card.lead-card { border-top: 4px solid var(--accent-bright); }
         .work-card h3 { font-size: 1.3rem; margin-bottom: 0.35rem; }
         .work-card .model {
             font-family: var(--heading);
             font-size: 0.85rem;
-            color: var(--teal);
+            color: var(--accent);
             font-weight: 500;
             margin-bottom: 1rem;
         }
@@ -309,45 +319,45 @@
             content: '\003E';
             position: absolute;
             left: 0;
-            color: var(--blue);
+            color: var(--accent);
             font-family: var(--heading);
             font-weight: 700;
         }
         .work-plain {
             margin-top: 2rem;
             padding: 1.25rem 1.5rem;
-            background: #fff;
-            border: 1px solid var(--line);
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 10px;
             font-size: 0.97rem;
-            color: var(--ink-soft);
+            color: var(--text-muted);
             max-width: 52rem;
         }
-        .work-plain strong { color: var(--navy); }
+        .work-plain strong { color: var(--text); }
 
         /* ---------- contact ---------- */
         .contact { padding-bottom: 5rem; }
         .contact-inner {
-            border: 1px solid var(--line);
+            border: 1px solid var(--border);
             border-radius: 12px;
-            background: var(--card);
+            background: var(--surface);
             padding: 2.5rem 1.75rem;
             max-width: 46rem;
         }
         .contact-inner h2 { font-size: 1.7rem; margin-bottom: 0.9rem; }
-        .contact-inner p { color: var(--ink-soft); margin-bottom: 1.5rem; max-width: 46ch; }
+        .contact-inner p { color: var(--text-muted); margin-bottom: 1.5rem; max-width: 46ch; }
         .contact-lines { list-style: none; display: grid; gap: 0.55rem; font-size: 1rem; }
-        .contact-lines li::before { content: '\003E\00A0'; color: var(--blue); font-family: var(--heading); font-weight: 700; }
+        .contact-lines li::before { content: '\003E\00A0'; color: var(--accent); font-family: var(--heading); font-weight: 700; }
 
         /* ---------- footer ---------- */
         .site-footer {
-            border-top: 1px solid var(--line);
+            border-top: 1px solid var(--border);
             padding: 2rem 0 2.5rem;
             font-size: 0.88rem;
-            color: var(--ink-soft);
+            color: var(--text-muted);
         }
         .site-footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-        .foot-chev { font-family: var(--heading); color: var(--blue); font-weight: 700; letter-spacing: -0.05em; }
+        .foot-chev { font-family: var(--heading); color: var(--accent); font-weight: 700; letter-spacing: -0.05em; }
     </style>
 </head>
 <body>
@@ -364,6 +374,10 @@
                 <a href="#shelf">The work</a>
                 <a href="#working-together">Working together</a>
                 <a href="#contact">Contact</a>
+                <button class="theme-toggle" type="button" aria-label="Toggle dark theme" aria-pressed="false">
+                    <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>
+                </button>
             </nav>
         </div>
     </header>
@@ -644,6 +658,26 @@
             extA.appendChild(extNote);
           }
         }
+      })();
+
+      // Theme toggle (Signal, restored): system default; explicit choice persisted.
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.querySelector('.theme-toggle');
+        if (!toggle) { return; }
+        var stored = null;
+        try { stored = localStorage.getItem('tbi-theme'); } catch (e) { /* private mode */ }
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var initial = (stored === 'light' || stored === 'dark') ? stored : (systemDark ? 'dark' : 'light');
+        toggle.setAttribute('aria-pressed', String(initial === 'dark'));
+        toggle.addEventListener('click', function () {
+          var sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var current = root.getAttribute('data-theme') || (sysDark ? 'dark' : 'light');
+          var next = current === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('tbi-theme', next); } catch (e) { /* ignore */ }
+          toggle.setAttribute('aria-pressed', String(next === 'dark'));
+        });
       })();
     </script>
 </body>
