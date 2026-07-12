@@ -63,7 +63,7 @@
   <rect x="0" y="560" width="1200" height="70" fill="rgba(0,0,0,0.4)"/>
 
   <!-- Location + URL -->
-  <text x="80" y="600" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.45)">St. Thomas, Ontario  ·  twobirds-kramerica.github.io/two-birds-innovation</text>
+  <text x="80" y="600" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.45)">Ontario, Canada  ·  twobirds-kramerica.github.io/two-birds-innovation</text>
 
   <!-- Book CTA -->
   <rect x="870" y="568" width="290" height="44" rx="6" fill="rgba(20,184,166,0.8)" stroke="rgba(45,212,191,0.5)" stroke-width="1"/>

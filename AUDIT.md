@@ -106,7 +106,7 @@ Reading the source: this site is the **revenue-adjacent** member of the portfoli
 - Specific pricing disclosed upfront in hero metadata — `CA$2,500 AI Workflow Audit` + `CA$4,000/mo Fractional AI Leadership`. Professional services sites that hide pricing lose qualified leads; this one doesn't.
 - Geographic positioning is sharp: "Southwestern Ontario" not "Canada" — smaller TAM but much higher match-quality.
 - Tagline is specific: "without the Toronto price tag" — names the actual objection the target buyer has.
-- Real phone number listed (519-933-9294) — unusual for a solo consultant and trust-building.
+- ~~Real phone number listed~~ — removed 2026-07 (privacy scrub: no phone number on any public surface).
 - 4 free tools shown as proof-of-capability: Clarity, DCC, Career Coach, Kevin's Apartment.
 - Hero CTA points at Clarity (the free diagnostic) — correct funnel top.
 - FAQ section present — handles common pre-sales objections.
