@@ -3,11 +3,261 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Two Birds Innovation — Brand Board (IN PROGRESS)</title>
-<style>body{font-family:system-ui,sans-serif;background:#0c0a1d;color:#d1d5db;padding:2rem}</style>
+<title>Two Birds Innovation — Brand Board</title>
+<style>
+  :root {
+    --navy: #0c0a1d; --navy-2: #13102e; --navy-3: #1a1640;
+    --teal: #2DD4BF; --teal-deep: #14B8A6; --teal-text-light: #0B665C;
+    --amber: #F0B429; --amber-text-light: #92400E;
+    --cloud: #F7F9FC; --ink: #14202E;
+    --grey: #d1d5db; --grey-muted: #9ca3af;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--navy); color: var(--grey);
+    line-height: 1.6; padding: 2.5rem 1.25rem 5rem;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  header.board { margin-bottom: 3rem; }
+  header.board h1 { color: #fff; font-size: clamp(1.7rem, 4vw, 2.6rem); letter-spacing: -0.02em; }
+  header.board p { color: var(--grey-muted); max-width: 640px; margin-top: 0.5rem; }
+  .tag { display: inline-block; background: var(--navy-3); color: var(--teal); border: 1px solid rgba(45,212,191,0.35); border-radius: 100px; padding: 4px 14px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem; }
+  section { margin-bottom: 3.5rem; }
+  h2 { color: #fff; font-size: 1.4rem; margin-bottom: 0.4rem; letter-spacing: -0.01em; }
+  .sub { color: var(--grey-muted); font-size: 0.95rem; margin-bottom: 1.4rem; max-width: 720px; }
+
+  /* Swatches */
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .swatch { border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+  .swatch .chip { height: 84px; }
+  .swatch .meta { padding: 10px 12px; background: var(--navy-2); font-size: 0.8rem; }
+  .swatch .meta b { display: block; color: #fff; font-size: 0.85rem; }
+  .swatch .meta code { color: var(--grey-muted); font-family: Consolas, monospace; }
+  .swatch .meta .cr { display: block; color: var(--teal); font-size: 0.72rem; margin-top: 2px; }
+
+  .panel-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .panel-pair { grid-template-columns: 1fr; } }
+  .panel { border-radius: 14px; padding: 2rem 1.6rem; border: 1px solid rgba(255,255,255,0.08); }
+  .panel.dark { background: var(--navy); }
+  .panel.light { background: var(--cloud); color: var(--ink); border-color: #D8E0EA; }
+  .panel h3 { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; opacity: 0.6; }
+  .panel.light h3 { color: #46586C; }
+
+  /* Lockups */
+  .lockup { display: flex; align-items: center; gap: 14px; margin-bottom: 1.4rem; }
+  .lockup svg { flex: none; }
+  .wordmark { font-weight: 700; letter-spacing: -0.02em; font-size: 1.35rem; }
+  .panel.dark .wordmark { color: #fff; }
+  .panel.light .wordmark { color: var(--ink); }
+  .wordmark .b-dark { color: var(--teal); }
+  .wordmark .b-light { color: var(--teal-text-light); }
+  .mono-note { font-size: 0.8rem; opacity: 0.65; margin-top: 0.6rem; }
+
+  /* Type specimen */
+  .spec-display { font-weight: 700; letter-spacing: -0.02em; color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 0.8rem; }
+  .spec-display .accent { color: var(--teal); }
+  .spec-display .warm { color: var(--amber); }
+  .spec-h2 { color: #fff; font-weight: 700; font-size: 1.5rem; margin-bottom: 0.6rem; }
+  .spec-body { max-width: 640px; margin-bottom: 0.8rem; }
+  .spec-small { color: var(--grey-muted); font-size: 0.85rem; }
+  .font-note { background: var(--navy-2); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px 16px; font-size: 0.85rem; color: var(--grey-muted); margin-top: 1.2rem; max-width: 720px; }
+  .font-note b { color: #fff; }
+
+  /* Compare */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .compare { grid-template-columns: 1fr; } }
+  .option { border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); background: var(--navy-2); padding: 1.6rem; }
+  .option.reco { border: 2px solid var(--amber); position: relative; }
+  .option.reco::after { content: "RECOMMENDED · 80%"; position: absolute; top: -11px; right: 16px; background: var(--amber); color: var(--navy); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 100px; }
+  .option h3 { color: #fff; font-size: 1.05rem; margin-bottom: 0.8rem; }
+  .option ul { list-style: none; font-size: 0.88rem; color: var(--grey-muted); }
+  .option li { padding-left: 1.1em; position: relative; margin-bottom: 0.45em; }
+  .option li::before { content: "•"; position: absolute; left: 0; color: var(--teal); }
+  .option.reco li::before { color: var(--amber); }
+  .mini-hero { border-radius: 10px; background: var(--navy); border: 1px solid rgba(255,255,255,0.08); padding: 1.3rem 1.2rem; margin-bottom: 1.1rem; }
+  .mini-hero .mh-title { color: #fff; font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; margin-bottom: 0.35rem; }
+  .mini-hero .mh-sub { color: var(--grey-muted); font-size: 0.8rem; margin-bottom: 0.8rem; }
+  .btn { display: inline-block; border-radius: 100px; padding: 8px 18px; font-size: 0.82rem; font-weight: 700; text-decoration: none; }
+  .btn-teal { background: var(--teal); color: var(--navy); }
+  .btn-ghost { border: 2px solid var(--teal-deep); color: var(--teal); margin-left: 8px; }
+  .chip-amber { display: inline-block; background: rgba(240,180,41,0.14); color: var(--amber); border: 1px solid rgba(240,180,41,0.4); border-radius: 100px; padding: 2px 10px; font-size: 0.7rem; font-weight: 700; margin-left: 8px; vertical-align: middle; }
+
+  .ratio-bar { display: flex; height: 34px; border-radius: 8px; overflow: hidden; max-width: 720px; border: 1px solid rgba(255,255,255,0.1); font-size: 0.68rem; font-weight: 700; }
+  .ratio-bar div { display: flex; align-items: center; justify-content: center; }
+  footer { color: var(--grey-muted); font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.4rem; max-width: 720px; }
+</style>
 </head>
 <body>
-<h1>Two Birds Innovation — Brand Board</h1>
-<p>IN PROGRESS — skeleton committed for durability; full visual board follows.</p>
+<div class="wrap">
+
+<header class="board">
+  <span class="tag">Proposal · 2026-07-18 · awaiting sign-off</span>
+  <h1>Two Birds Innovation — Brand Board</h1>
+  <p>Two birds, two colours: <strong style="color:var(--teal)">Signal Teal</strong> (the system) paired with <strong style="color:var(--amber)">Warm Amber</strong> (the human). Full rationale in <code style="color:var(--grey-muted)">brand/brand-guidelines.md</code>. No live-site changes made.</p>
+</header>
+
+<!-- ICON MARK + LOCKUPS -->
+<section>
+  <h2>Logo — wordmark + proposed "two birds" mark</h2>
+  <p class="sub">One motion, two birds rising together. Lower bird teal (AI/systems), upper bird amber (human/operations). Original geometry, no stock. Placeholder curves — final drawing sprint follows approval.</p>
+  <div class="panel-pair">
+    <div class="panel dark">
+      <h3>On dark (primary context)</h3>
+      <div class="lockup">
+        <svg width="52" height="52" viewBox="0 0 64 64" role="img" aria-label="Two Birds mark on dark">
+          <path d="M8 46 Q20 34 30 33 Q40 32 46 40 Q36 40 30 42 Q20 44 8 46 Z" fill="#2DD4BF"/>
+          <path d="M20 30 Q32 18 42 17 Q52 16 58 24 Q48 24 42 26 Q32 28 20 30 Z" fill="#F0B429"/>
+        </svg>
+        <span class="wordmark">Two <span class="b-dark">Birds</span> Innovation</span>
+      </div>
+      <div class="lockup">
+        <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-label="Mono mark white">
+          <path d="M8 46 Q20 34 30 33 Q40 32 46 40 Q36 40 30 42 Q20 44 8 46 Z" fill="#FFFFFF"/>
+          <path d="M20 30 Q32 18 42 17 Q52 16 58 24 Q48 24 42 26 Q32 28 20 30 Z" fill="#FFFFFF"/>
+        </svg>
+        <span class="wordmark" style="font-size:1.1rem">Two Birds</span>
+      </div>
+      <p class="mono-note">Mono fallback: both birds white. Never gradients, outlines, or shadows.</p>
+    </div>
+    <div class="panel light">
+      <h3>On light (documents, print)</h3>
+      <div class="lockup">
+        <svg width="52" height="52" viewBox="0 0 64 64" role="img" aria-label="Two Birds mark on light">
+          <path d="M8 46 Q20 34 30 33 Q40 32 46 40 Q36 40 30 42 Q20 44 8 46 Z" fill="#0B665C"/>
+          <path d="M20 30 Q32 18 42 17 Q52 16 58 24 Q48 24 42 26 Q32 28 20 30 Z" fill="#B45309"/>
+        </svg>
+        <span class="wordmark">Two <span class="b-light">Birds</span> Innovation</span>
+      </div>
+      <div class="lockup">
+        <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-label="Mono mark ink">
+          <path d="M8 46 Q20 34 30 33 Q40 32 46 40 Q36 40 30 42 Q20 44 8 46 Z" fill="#14202E"/>
+          <path d="M20 30 Q32 18 42 17 Q52 16 58 24 Q48 24 42 26 Q32 28 20 30 Z" fill="#14202E"/>
+        </svg>
+        <span class="wordmark" style="font-size:1.1rem">Two Birds</span>
+      </div>
+      <p class="mono-note" style="color:#46586C">On light, use deepened bird colours (deep teal + deep amber) or mono ink.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAVICON -->
+<section>
+  <h2>Favicon — current vs proposed</h2>
+  <p class="sub">Current TB monogram (live since S-TBI-FAVICON) stays as interim; drop-in swap to the bird tile once the mark is approved.</p>
+  <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center;">
+    <div style="text-align:center">
+      <svg width="64" height="64" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0c0a1d"/><text x="16" y="22" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#2dd4bf">TB</text></svg>
+      <div class="spec-small" style="margin-top:6px">Current (interim)</div>
+    </div>
+    <div style="text-align:center">
+      <svg width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0c0a1d"/><path d="M12 46 Q23 35 32 34 Q41 33 47 40 Q38 40 32 42 Q23 44 12 46 Z" fill="#2DD4BF"/><path d="M20 31 Q31 20 40 19 Q49 18 55 25 Q46 25 40 27 Q31 29 20 31 Z" fill="#F0B429"/></svg>
+      <div class="spec-small" style="margin-top:6px">Proposed 64 px</div>
+    </div>
+    <div style="text-align:center">
+      <svg width="32" height="32" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0c0a1d"/><path d="M10 47 Q22 34 32 33 Q42 32 49 41 Q38 41 32 43 Q22 45 10 47 Z" fill="#2DD4BF"/><path d="M18 31 Q30 18 40 17 Q50 16 57 25 Q46 25 40 27 Q30 29 18 31 Z" fill="#F0B429"/></svg>
+      <div class="spec-small" style="margin-top:6px">32 px</div>
+    </div>
+    <div style="text-align:center">
+      <svg width="16" height="16" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0c0a1d"/><path d="M8 48 Q21 33 32 32 Q43 31 51 42 Q39 42 32 44 Q21 46 8 48 Z" fill="#2DD4BF"/><path d="M16 31 Q29 16 40 15 Q51 14 59 25 Q47 25 40 27 Q29 29 16 31 Z" fill="#F0B429"/></svg>
+      <div class="spec-small" style="margin-top:6px">16 px (strokes thickened)</div>
+    </div>
+  </div>
+</section>
+
+<!-- COLOUR SYSTEM -->
+<section>
+  <h2>Colour system</h2>
+  <p class="sub">All ratios computed against WCAG 2.x relative luminance on Deep Space Navy #0c0a1d (dark) or Cloud #F7F9FC (light).</p>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="chip" style="background:#0c0a1d"></div><div class="meta"><b>Deep Space Navy</b><code>#0c0a1d</code><span class="cr">Primary surface</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#13102e"></div><div class="meta"><b>Space 800</b><code>#13102e</code><span class="cr">Section fills</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#1a1640"></div><div class="meta"><b>Space 700</b><code>#1a1640</code><span class="cr">Cards</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#2DD4BF"></div><div class="meta"><b>Signal Teal</b><code>#2DD4BF</code><span class="cr">10.48:1 on navy — AAA</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#14B8A6"></div><div class="meta"><b>Teal 500</b><code>#14B8A6</code><span class="cr">7.83:1 on navy — AAA</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#0B665C"></div><div class="meta"><b>Deep Teal</b><code>#0B665C</code><span class="cr">6.49:1 on Cloud — text-safe on light</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#F0B429"></div><div class="meta"><b>Warm Amber</b><code>#F0B429</code><span class="cr">10.46:1 on navy — AAA</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#92400E"></div><div class="meta"><b>Deep Amber</b><code>#92400E</code><span class="cr">6.72:1 on Cloud — text-safe on light</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#F7F9FC"></div><div class="meta"><b>Cloud</b><code>#F7F9FC</code><span class="cr">Light surface</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#14202E"></div><div class="meta"><b>Ink</b><code>#14202E</code><span class="cr">15.6:1 on Cloud — AAA</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#d1d5db"></div><div class="meta"><b>Body Grey</b><code>#d1d5db</code><span class="cr">13.24:1 on navy — AAA</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#9ca3af"></div><div class="meta"><b>Muted Grey</b><code>#9ca3af</code><span class="cr">7.68:1 on navy — AAA</span></div></div>
+  </div>
+  <p class="sub" style="margin-top:1.2rem">Surface balance — navy ≈ 75% · teal ≈ 15–25% · amber ≤ 10% (punctuation, not paint):</p>
+  <div class="ratio-bar">
+    <div style="flex:75; background:#0c0a1d; color:#9ca3af;">navy 75%</div>
+    <div style="flex:18; background:#2DD4BF; color:#0c0a1d;">teal</div>
+    <div style="flex:7; background:#F0B429; color:#0c0a1d;">amber</div>
+  </div>
+</section>
+
+<!-- SWATCHES ON LIGHT -->
+<section>
+  <h2>Same palette on light</h2>
+  <div class="panel light">
+    <h3>Light-background treatments</h3>
+    <p style="margin-bottom:0.8rem">Body text in <strong>Ink #14202E</strong>. Links and accents use <a href="#" style="color:#0B665C; font-weight:700;">Deep Teal #0B665C</a>, warm emphasis in <strong style="color:#92400E">Deep Amber #92400E</strong>.</p>
+    <p style="margin-bottom:0.8rem"><span style="background:#DDF3EE; color:#0B665C; border-radius:100px; padding:3px 12px; font-size:0.8rem; font-weight:700;">Teal badge</span>&nbsp;
+    <span style="background:#FDF0D5; color:#92400E; border-radius:100px; padding:3px 12px; font-size:0.8rem; font-weight:700;">Amber badge</span>&nbsp;
+    <a href="#" class="btn btn-teal">Teal button — navy text 10.5:1</a></p>
+    <p style="font-size:0.82rem; color:#46586C;">Rule: bright teal #2DD4BF and bright amber #F0B429 are fills/decoration only on light — never text (contrast fails).</p>
+  </div>
+</section>
+
+<!-- TYPE SPECIMEN -->
+<section>
+  <h2>Type specimen</h2>
+  <div class="panel dark" style="border:1px solid rgba(255,255,255,0.08)">
+    <p class="spec-display">Operations that work.<br><span class="accent">AI that behaves.</span> <span class="warm">Humans first.</span></p>
+    <p class="spec-h2">Heading two — clear and calm</p>
+    <p class="spec-body">Body text sits at 17 px with generous 1.7 line-height. Plain, specific, Canadian. Evidence over adjectives — the brand never promises magic; it shows shipped systems.</p>
+    <p class="spec-small">Small/meta text · 0.85–0.9rem · muted grey #9ca3af</p>
+    <div class="font-note"><b>Faces:</b> Space Grotesk (display, 600–700, −0.02em) + IBM Plex Sans (body) — both SIL OFL, self-hosted in v2-lab/fonts/. This board renders in your system stack because it is dependency-free by design; the live v2 identity ships the real fonts.</div>
+  </div>
+</section>
+
+<!-- THE CHOICE -->
+<section>
+  <h2>The choice Aaron asked for — current teal vs recommended direction</h2>
+  <p class="sub">Left: today's single-hue teal. Right: teal kept as primary, plus Warm Amber as the human counterpoint. The generic-AI trap is blue-purple gradients — teal already avoids it; amber adds the warmth the brand story needs.</p>
+  <div class="compare">
+    <div class="option">
+      <h3>Option A — Teal only (status quo)</h3>
+      <div class="mini-hero">
+        <div class="mh-title">Two <span style="color:var(--teal)">Birds</span> Innovation</div>
+        <div class="mh-sub">AI strategy and digital tools for Ontario</div>
+        <a href="#" class="btn btn-teal">Book a call</a><a href="#" class="btn btn-ghost">See services</a>
+      </div>
+      <ul>
+        <li>Safe; zero migration; AAA contrast throughout</li>
+        <li>But: built on Tailwind's stock teal ramp — quietly generic</li>
+        <li>Leaves the warmth/humanity gap unaddressed</li>
+        <li>Single hue carries both "system" and "human" — muddled story</li>
+      </ul>
+    </div>
+    <div class="option reco">
+      <h3>Option B — Teal + Warm Amber (two birds, two colours)</h3>
+      <div class="mini-hero">
+        <div class="mh-title">Two <span style="color:var(--teal)">Birds</span> Innovation <span class="chip-amber">Human-first</span></div>
+        <div class="mh-sub">Operations + AI — built by a person, for people</div>
+        <a href="#" class="btn btn-teal">Book a call</a>
+        <a href="#" class="btn" style="border:2px solid var(--amber); color:var(--amber); margin-left:8px;">Why human-first?</a>
+      </div>
+      <ul>
+        <li>Keeps all deployed teal equity (site, favicon, OG, v2 tokens)</li>
+        <li>Amber #F0B429 = 10.46:1 on navy — equal-strength partner, AAA</li>
+        <li>Maps the name to the palette: teal bird = system, amber bird = human</li>
+        <li>Warm accent is the documented 2026 differentiator for human-scale consultancies</li>
+        <li>Amber already exists as a v2 token (dark focus ring) — promotion, not invention</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Proposal only — no live-site files touched. Sources, rejected options, and full usage rules: <code>brand/brand-guidelines.md</code>. Contrast ratios computed 2026-07-18 (WCAG 2.x relative luminance).
+</footer>
+
+</div>
 </body>
 </html>
