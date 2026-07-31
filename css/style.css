@@ -50,6 +50,7 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: dark;
 }
 
 body {
@@ -1156,5 +1157,15 @@ summary:focus-visible {
 
     .hero-media {
         display: none;
+    }
+}
+
+/* Prevent OS/browser dark-mode auto-inversion — this site is already a
+   dark (deep-space) palette with no light variant, so belt-and-suspenders
+   forces the same colours under a light OS preference too. */
+@media (prefers-color-scheme: light) {
+    body {
+        background: var(--space-900);
+        color: var(--grey-300);
     }
 }
