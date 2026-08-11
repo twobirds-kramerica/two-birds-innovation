@@ -633,10 +633,11 @@
 
     <footer class="site-footer">
         <div class="wrap">
-            <p><span class="foot-chev" aria-hidden="true">&gt;&lt;</span> &copy; 2026 Two Birds Innovation &middot; St. Thomas, Ontario</p>
+            <p><span class="foot-chev" aria-hidden="true">&gt;&lt;</span> &copy; <span id="copyright-year">2026</span> Two Birds Innovation &middot; St. Thomas, Ontario</p>
             <p>Built by hand. Static HTML, no trackers, no cookies.</p>
         </div>
     </footer>
+    <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
 
     <script>
       // External-link framing: every off-site link opens in a new tab and
