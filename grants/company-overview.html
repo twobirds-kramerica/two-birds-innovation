@@ -263,8 +263,9 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Two Birds Innovation &bull; St. Thomas, Ontario</p>
+            <p>&copy; <span id="copyright-year">2026</span> Two Birds Innovation &bull; St. Thomas, Ontario</p>
         </div>
     </footer>
+    <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
