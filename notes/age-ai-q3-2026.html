@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[age:AI Q3 2026] The Automation of Automation — Event Notes</title>
+    <meta name="description" content="Event notes and briefing from [age:AI Q3 2026] The Automation of Automation, held September 14, 2026 at Builders Club in Kitchener, ON. Speakers: Sam Hebeisen (mindmodel.ai) &amp; Colleagues.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://twobirds-kramerica.github.io/two-birds-innovation/notes/age-ai-q3-2026.html">
+    <meta property="og:title" content="[age:AI Q3 2026] The Automation of Automation — Event Briefing">
+    <meta property="og:description" content="Chronological session notes and media briefing from age:AI Q3 2026 at Builders Club, Kitchener, ON. Data valuation, wetware, agentic infrastructure, physical robotics, and compute scaling.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://twobirds-kramerica.github.io/two-birds-innovation/notes/age-ai-q3-2026.html">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:image" content="https://twobirds-kramerica.github.io/two-birds-innovation/images/og-card.png">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+      /* Scoped styles for event notes briefing */
+      .event-hero {
+          padding: 3rem 0 2rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          margin-bottom: 2.5rem;
+      }
+      .event-hero h1 {
+          font-size: 2.4rem;
+          font-weight: 800;
+          color: var(--white);
+          margin-bottom: 0.75rem;
+          line-height: 1.25;
+      }
+      .event-subtitle {
+          font-size: 1.15rem;
+          color: var(--teal-300);
+          font-weight: 500;
+          margin-bottom: 1.25rem;
+          line-height: 1.5;
+      }
+      .event-meta-bar {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem 1.75rem;
+          background: var(--space-800);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: var(--radius);
+          padding: 1rem 1.25rem;
+          font-size: 0.92rem;
+          color: var(--grey-300);
+      }
+      .event-meta-item strong {
+          color: var(--teal-400);
+      }
+      
+      .notes-section {
+          background: var(--space-800);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          border-radius: var(--radius);
+          padding: 2rem;
+          margin-bottom: 2.5rem;
+      }
+      .notes-section-header {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-bottom: 1.25rem;
+          border-bottom: 1px solid rgba(20, 184, 166, 0.2);
+          padding-bottom: 0.75rem;
+      }
+      .section-number {
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--teal-400);
+          background: rgba(20, 184, 166, 0.12);
+          padding: 0.25rem 0.6rem;
+          border-radius: 4px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          white-space: nowrap;
+      }
+      .notes-section-header h2 {
+          font-size: 1.45rem;
+          color: var(--white);
+          margin: 0;
+      }
+      .notes-body {
+          font-size: 1.02rem;
+          line-height: 1.7;
+          color: var(--grey-300);
+          margin-bottom: 1.5rem;
+      }
+      .notes-body p {
+          margin-bottom: 1rem;
+      }
+      .notes-body p:last-child {
+          margin-bottom: 0;
+      }
+      .notes-body ul {
+          margin: 0.75rem 0 1rem 1.5rem;
+      }
+      .notes-body li {
+          margin-bottom: 0.4rem;
+      }
+
+      .media-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.25rem;
+          margin-top: 1.5rem;
+      }
+      .media-card {
+          background: var(--space-700);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 8px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+      }
+      .media-card img, .media-card video {
+          width: 100%;
+          height: auto;
+          max-height: 340px;
+          object-fit: cover;
+          display: block;
+          background: #000;
+      }
+      .media-card video {
+          object-fit: contain;
+      }
+      .media-caption {
+          padding: 0.75rem 1rem;
+          font-size: 0.85rem;
+          color: var(--grey-400);
+          background: rgba(0, 0, 0, 0.25);
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .media-timestamp {
+          font-weight: 600;
+          color: var(--teal-300);
+          margin-right: 0.35rem;
+      }
+
+      .resource-links {
+          margin-top: 1.25rem;
+          padding: 0.85rem 1.1rem;
+          background: rgba(20, 184, 166, 0.06);
+          border-left: 3px solid var(--teal-400);
+          border-radius: 0 6px 6px 0;
+          font-size: 0.92rem;
+      }
+      .resource-links strong {
+          color: var(--teal-300);
+      }
+      .resource-links a {
+          color: var(--teal-400);
+          text-decoration: underline;
+      }
+      .resource-links a:hover {
+          color: var(--teal-200);
+      }
+
+      .notes-footer {
+          text-align: center;
+          padding: 2.5rem 0;
+          font-size: 0.95rem;
+          color: var(--grey-400);
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          margin-top: 3rem;
+      }
+      .notes-footer a {
+          color: var(--teal-400);
+          text-decoration: underline;
+      }
+      .notes-footer a:hover {
+          color: var(--teal-200);
+      }
+
+      /* Print CSS for clean browser archiving */
+      @media print {
+          @page {
+              size: portrait;
+              margin: 1.5cm;
+          }
+          html, body {
+              background: #ffffff !important;
+              color: #111827 !important;
+              font-size: 10pt !important;
+              line-height: 1.5 !important;
+          }
+          .skip-link, .site-header, .no-print {
+              display: none !important;
+          }
+          .container {
+              max-width: 100% !important;
+              padding: 0 !important;
+              margin: 0 !important;
+          }
+          .event-hero {
+              padding: 0.5rem 0 1rem !important;
+              border-bottom: 2px solid #111827 !important;
+              margin-bottom: 1.25rem !important;
+          }
+          .event-hero h1 {
+              color: #111827 !important;
+              font-size: 18pt !important;
+              margin-bottom: 0.5rem !important;
+          }
+          .event-subtitle {
+              color: #0f766e !important;
+              font-size: 11pt !important;
+              margin-bottom: 0.75rem !important;
+          }
+          .event-meta-bar {
+              background: #f3f4f6 !important;
+              border: 1px solid #d1d5db !important;
+              color: #1f2937 !important;
+              padding: 0.5rem 0.75rem !important;
+              font-size: 9pt !important;
+          }
+          .event-meta-item strong {
+              color: #0f766e !important;
+          }
+          .notes-section {
+              background: #ffffff !important;
+              border: 1px solid #e5e7eb !important;
+              border-radius: 4px !important;
+              padding: 1rem !important;
+              margin-bottom: 1.25rem !important;
+              box-shadow: none !important;
+              page-break-inside: avoid;
+              break-inside: avoid;
+          }
+          .notes-section-header {
+              border-bottom: 1px solid #0f766e !important;
+              padding-bottom: 0.4rem !important;
+              margin-bottom: 0.75rem !important;
+              page-break-after: avoid;
+              break-after: avoid;
+          }
+          .notes-section-header h2 {
+              color: #111827 !important;
+              font-size: 12pt !important;
+          }
+          .section-number {
+              background: #e6fffa !important;
+              color: #0f766e !important;
+              border: 1px solid #0f766e !important;
+          }
+          .notes-body {
+              color: #1f2937 !important;
+              font-size: 9.5pt !important;
+              margin-bottom: 1rem !important;
+          }
+          .media-grid {
+              grid-template-columns: repeat(2, 1fr) !important;
+              gap: 0.75rem !important;
+              margin-top: 1rem !important;
+              page-break-inside: avoid;
+              break-inside: avoid;
+          }
+          .media-card {
+              background: #f9fafb !important;
+              border: 1px solid #d1d5db !important;
+              page-break-inside: avoid;
+              break-inside: avoid;
+          }
+          .media-card img, .media-card video {
+              max-height: 200px !important;
+              object-fit: contain !important;
+              background: #f3f4f6 !important;
+          }
+          .media-caption {
+              background: #f3f4f6 !important;
+              color: #374151 !important;
+              border-top: 1px solid #e5e7eb !important;
+              font-size: 8pt !important;
+              padding: 0.4rem 0.6rem !important;
+          }
+          .media-timestamp {
+              color: #0f766e !important;
+          }
+          .resource-links {
+              background: #f0fdf4 !important;
+              border-left: 3px solid #0f766e !important;
+              color: #1f2937 !important;
+              font-size: 8.5pt !important;
+          }
+          .resource-links a {
+              color: #0f766e !important;
+              text-decoration: underline !important;
+          }
+          .resource-links a::after {
+              content: " (" attr(href) ")";
+              font-size: 8pt;
+              color: #4b5563;
+          }
+          .notes-footer {
+              border-top: 1px solid #d1d5db !important;
+              color: #4b5563 !important;
+              font-size: 8.5pt !important;
+              padding: 1rem 0 !important;
+              margin-top: 1.5rem !important;
+          }
+          .notes-footer a {
+              color: #0f766e !important;
+          }
+      }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo">Two Birds Innovation</a>
+            <nav class="main-nav">
+                <a href="../index.html">Home</a>
+                <a href="../consulting.html">Consulting</a>
+                <a href="../consulting-sme.html">SME Solutions</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <!-- Hero Header -->
+        <section class="event-hero">
+            <h1>[age:AI Q3 2026] The Automation of Automation</h1>
+            <p class="event-subtitle">September 14, 2026 | Builders Club, Kitchener, ON | Sam Hebeisen (mindmodel.ai) &amp; Colleagues</p>
+            <div class="event-meta-bar">
+                <div class="event-meta-item"><strong>Event:</strong> age:AI Q3 2026 Briefing</div>
+                <div class="event-meta-item"><strong>Location:</strong> Builders Club, Kitchener, ON</div>
+                <div class="event-meta-item"><strong>Lead Presenter:</strong> Sam Hebeisen (<a href="https://mindmodel.ai" target="_blank" rel="noopener" style="color:var(--teal-400);">mindmodel.ai</a>) &amp; Colleagues</div>
+                <div class="event-meta-item"><strong>Format:</strong> Chronological Media &amp; Session Notes</div>
+            </div>
+        </section>
+
+        <!-- Section 1 -->
+        <section class="notes-section" id="data-valuation">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 01</span>
+                <h2>Data Valuation &amp; Human Capture</h2>
+            </div>
+            <div class="notes-body">
+                <p>The session opened with an exploration of how AI training datasets are expanding into every corner of human activity. As model developers exhaust standard web crawl data, attention has shifted to high-resolution capture of human labor, expert domain knowledge, and specialized workflows.</p>
+                <p>Key highlights from this discussion centered on the economic framing of human output:</p>
+                <ul>
+                    <li><strong>Training sets everywhere:</strong> Continuous background capture across software tools, creative platforms, and operational workflows converts tacit human knowledge into structured model weights.</li>
+                    <li><strong>Hourly-rate framing vs. data valuation:</strong> Traditional labor pricing measures time spent ($/hour), but model training repositions work as one-time data extraction. Once captured into training corpora, the marginal cost of reproducing expert problem-solving drops toward zero.</li>
+                    <li><strong>The shift to data royalty &amp; capture models:</strong> Discussion on how individual practitioners and organizations can evaluate the true enterprise value of their proprietary operational data before licensing or exposing it to model trainers.</li>
+                </ul>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <video controls preload="metadata">
+                        <source src="../images/age-ai-2026/20260914_174657.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <figcaption class="media-caption"><span class="media-timestamp">17:46:57 EDT</span> Video clip from opening session on data valuation framing</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <video controls preload="metadata">
+                        <source src="../images/age-ai-2026/20260914_174722.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <figcaption class="media-caption"><span class="media-timestamp">17:47:22 EDT</span> Opening presentation segment on human capture models</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_174839.jpg" alt="Presentation photo from data valuation session" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:48:39 EDT</span> Session photo during data capture and valuation talk</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_174912.jpg" alt="Slide photo from opening talk" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:49:12 EDT</span> Presentation slide from the opening dataset discussion</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <video controls preload="metadata">
+                        <source src="../images/age-ai-2026/20260914_174935.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <figcaption class="media-caption"><span class="media-timestamp">17:49:35 EDT</span> Video recording during data economics presentation</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <video controls preload="metadata">
+                        <source src="../images/age-ai-2026/20260914_175404.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <figcaption class="media-caption"><span class="media-timestamp">17:54:04 EDT</span> Concluding video clip from opening data valuation segment</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="notes-section" id="biological-wetware">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 02</span>
+                <h2>Biological Wetware</h2>
+            </div>
+            <div class="notes-body">
+                <p>Moving beyond silicon architectures, the talk examined frontier biological computing and bio-hybrid neural systems. As compute energy demands scale exponentially, biological wetware presents extreme energy efficiency and novel learning paradigms.</p>
+                <p>Key case studies highlighted during this segment included:</p>
+                <ul>
+                    <li><strong>Cortical Labs' DishBrain:</strong> Biological human and rodent neurons cultured on high-density microelectrode arrays (HD-MEAs), demonstrating real-time adaptive learning by playing the classic arcade game Pong.</li>
+                    <li><strong>Project CETI (Cetacean Translation Initiative):</strong> Utilizing bio-acoustic sensor arrays, underwater hydrophones, and deep generative models to decipher sperm whale click communication (codas) and inter-species linguistics.</li>
+                    <li><strong>Bio-silicon integration:</strong> How biological neural substrate interfaces offer sub-watt processing efficiencies compared to multi-kilowatt GPU clusters for closed-loop sensory-motor control.</li>
+                </ul>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_175739(0).jpg" alt="Session photo from biological wetware presentation" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:57:39 EDT</span> Session photo from biological computing presentation</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_175739.jpg" alt="Presentation photo showing wetware research slide" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:57:39 EDT</span> Slide detail from bio-hybrid neural research talk</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_175740(0).jpg" alt="Session view during Project CETI discussion" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:57:40 EDT</span> Presentation view during biological systems overview</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_175740.jpg" alt="Photo of slide on biological neural interfaces" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:57:40 EDT</span> Photo captured during biological computing segment</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_175741(0).jpg" alt="Presentation slide detailing microelectrode array testing" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:57:41 EDT</span> Slide graphic illustrating biological neural arrays</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_175741.jpg" alt="Audience view of biological wetware presentation" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">17:57:41 EDT</span> Session overview from wetware and bio-AI presentation</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="notes-section" id="agentic-infrastructure">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 03</span>
+                <h2>Agentic Infrastructure</h2>
+            </div>
+            <div class="notes-body">
+                <p>The core theme of the event focused on giving autonomous AI agents "hands" — moving from passive chat interfaces to active tooling, API execution, and end-to-end task completion across complex digital environments.</p>
+                <p>Key highlights and live demonstrations included:</p>
+                <ul>
+                    <li><strong>Tooling &amp; Protocols (Make / n8n / MCP):</strong> Connecting LLM reasoning engines directly to real-world workflows using low-code integration platforms like <a href="https://make.com" target="_blank" rel="noopener">Make</a>, open-source automation via <a href="https://n8n.io" target="_blank" rel="noopener">n8n</a>, and Anthropic's Model Context Protocol (MCP) for standardizing local and remote tool execution.</li>
+                    <li><strong>Devin Bulk-Barn-Style Multi-Step Demo:</strong> A live demonstration using autonomous coding agent <a href="https://devin.ai" target="_blank" rel="noopener">Devin</a> to parse unstructured physical inventory catalogues, automate bin-level item mapping, and generate production code without human intervention.</li>
+                    <li><strong>Bowl Builder Automation:</strong> Case study on custom order automation for multi-ingredient fast-casual dining, demonstrating automated ticket routing and ingredient optimization.</li>
+                    <li><strong>Diner Automation Survey Stats:</strong> Benchmark metrics on labor replacement vs augmentation, service speed gains, and ROI numbers from regional quick-service hospitality deployments. Mention of emerging gig/human-in-the-loop fallback models like <a href="https://rentahuman.ai" target="_blank" rel="noopener">Rentahuman</a>.</li>
+                </ul>
+            </div>
+            <div class="resource-links">
+                <strong>Referenced Tools &amp; Protocols:</strong>
+                <a href="https://make.com" target="_blank" rel="noopener">Make</a> &middot;
+                <a href="https://n8n.io" target="_blank" rel="noopener">n8n</a> &middot;
+                <a href="https://devin.ai" target="_blank" rel="noopener">Devin (Cognition)</a> &middot;
+                <a href="https://rentahuman.ai" target="_blank" rel="noopener">Rentahuman</a>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <video controls preload="metadata">
+                        <source src="../images/age-ai-2026/20260914_180309.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <figcaption class="media-caption"><span class="media-timestamp">18:03:09 EDT</span> Video recording from live agentic infrastructure demonstration</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_180629.jpg" alt="Presentation photo from agentic workflow presentation" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">18:06:29 EDT</span> Presentation slide showing agent workflow architecture</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <video controls preload="metadata">
+                        <source src="../images/age-ai-2026/20260914_180634.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <figcaption class="media-caption"><span class="media-timestamp">18:06:34 EDT</span> Video clip showcasing multi-step agent execution demo</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="notes-section" id="physical-automation">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 04</span>
+                <h2>Physical Automation</h2>
+            </div>
+            <div class="notes-body">
+                <p>Bridging software intelligence with hardware execution, the session featured a live physical robotics demonstration using the Unitree Go2 Pro quadruped robot dog.</p>
+                <p>Key demonstration takeaways:</p>
+                <ul>
+                    <li><strong>Unitree Go2 Pro Quadruped:</strong> Demonstrating real-time terrain navigation, obstacle detection via onboard 3D LiDAR, dynamic payload balancing, and acrobatic maneuvers including an inline backflip.</li>
+                    <li><strong>Commercial deployment readiness:</strong> Discussion of falling hardware cost curves (sub-$3,000 quadruped platforms) enabling practical commercial applications in industrial facility inspection, security patrols, and last-mile logistics.</li>
+                </ul>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_181557.jpg" alt="Photo from Unitree Go2 Pro robot dog demonstration" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">18:15:57 EDT</span> Photo from physical robotics demonstration</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_182540.jpg" alt="Photo during quadruped robot dog demo" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">18:25:40 EDT</span> Live demonstration of the Unitree Go2 Pro quadruped</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_182643.jpg" alt="Photo showing robot dog backflip maneuver" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">18:26:43 EDT</span> Robot dog backflip and mobility demonstration view</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="notes-section" id="realtime-avatar">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 05</span>
+                <h2>Realtime AI Avatar Demo</h2>
+            </div>
+            <div class="notes-body">
+                <p>An interactive live demonstration showcased sub-second, multi-modal conversational avatars capable of natural real-time dialogue and dynamic multi-language translation.</p>
+                <p>Key aspects of the demo:</p>
+                <ul>
+                    <li><strong>French-language realtime conversational avatar:</strong> Live interaction in French demonstrating seamless sub-200ms latency between speech input, reasoning generation, facial expression synthesis, and synchronized lip movement.</li>
+                    <li><strong>Enterprise applications:</strong> Low-friction deployment in customer service kiosks, bilingual public services, and automated video communications without pre-recorded voice talents.</li>
+                </ul>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_183222.jpg" alt="Photo from French language AI avatar demonstration" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">18:32:22 EDT</span> Photo from realtime French-language AI avatar presentation</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_184145.jpg" alt="Photo captured during conversational avatar demo" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">18:41:45 EDT</span> Live interaction during multi-modal avatar demonstration</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="notes-section" id="school-board-policy">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 06</span>
+                <h2>Waterloo-Region School Board AI Policy Discussion</h2>
+            </div>
+            <div class="notes-body">
+                <p>The agenda turned to local governance and institutional readiness, highlighting ongoing policy initiatives within Waterloo Region school boards (WRDSB / WCDSB) regarding generative AI adoption in education.</p>
+                <p>Core discussion themes:</p>
+                <ul>
+                    <li><strong>Classroom AI Guidelines &amp; Governance:</strong> Developing clear boundaries between permitted AI assist tools and academic dishonesty, while building digital literacy across K-12 curricula.</li>
+                    <li><strong>Equitable Access &amp; Privacy Safeguards:</strong> Ensuring student data protection, avoiding non-consensual data harvest by commercial LLM vendors, and providing equal access to advanced AI tools across diverse socio-economic student populations.</li>
+                    <li><strong>Teacher Enablement:</strong> Practical professional development strategies for educators to streamline lesson planning and administrative assessment using safe AI platforms.</li>
+                </ul>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_190918.jpg" alt="Photo from school board AI policy discussion" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">19:09:18 EDT</span> Photo from Waterloo Region school board policy discussion</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_191104.jpg" alt="Presentation photo from education policy panel" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">19:11:04 EDT</span> Presentation view during educational AI governance session</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="notes-section" id="audience-poll">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 07</span>
+                <h2>Audience Temperature-Check / Four-Questions Poll</h2>
+            </div>
+            <div class="notes-body">
+                <p>An interactive live polling segment engaged attendees to capture room sentiment across four critical dimensions regarding local AI adoption and economic expectations.</p>
+                <p>The four survey topics evaluated:</p>
+                <ul>
+                    <li><strong>1. Operational AI Integration Depth:</strong> To what extent are local organizations actively deploying LLMs and automated workflows in daily production?</li>
+                    <li><strong>2. Governance &amp; Safety Readiness:</strong> Are formal risk frameworks and data privacy guardrails keeping pace with rapid tool deployment?</li>
+                    <li><strong>3. 12-24 Month Economic Impact:</strong> What degree of workforce displacement or productivity expansion do local founders and leaders anticipate?</li>
+                    <li><strong>4. Autonomous Agent Sentiment:</strong> How comfortable are decision-makers delegating autonomous decision-making power to AI agents without manual oversight?</li>
+                </ul>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_202142.jpg" alt="Photo from audience temperature check poll" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">20:21:42 EDT</span> Audience temperature-check and live polling segment</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_202337.jpg" alt="Photo showing four questions survey results" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">20:23:37 EDT</span> Four-questions survey interaction with attendees</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <img src="../images/age-ai-2026/20260914_202711.jpg" alt="Photo captured during room discussion on poll results" loading="lazy">
+                    <figcaption class="media-caption"><span class="media-timestamp">20:27:11 EDT</span> Group discussion following audience survey feedback</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="notes-section" id="epoch-ai-compute">
+            <div class="notes-section-header">
+                <span class="section-number">Topic 08</span>
+                <h2>Epoch AI Compute &amp; Data-Center Growth Discussion</h2>
+            </div>
+            <div class="notes-body">
+                <p>The briefing concluded with a detailed examination of AI compute scaling trajectories, drawing from recent empirical data compiled by <a href="https://epochai.org" target="_blank" rel="noopener">Epoch AI</a>.</p>
+                <p>Key takeaways from the scaling analysis:</p>
+                <ul>
+                    <li><strong>Exponential Compute Curves:</strong> Analyzing cumulative training FLOPS and the physical hardware expansion required to sustain frontier AI progress through 2026-2030.</li>
+                    <li><strong>Data Center Infrastructure Bottlenecks:</strong> Electrical grid capacity constraints, gigawatt-scale campus development, cooling requirements, and nuclear power purchase agreements powering frontier AI clusters.</li>
+                    <li><strong>Data Saturation &amp; Synthetic Frontier:</strong> The transition from human text consumption to synthetic data generation and self-play environments as web data limits are reached.</li>
+                </ul>
+            </div>
+            <div class="resource-links">
+                <strong>Research Citation:</strong>
+                <a href="https://epochai.org" target="_blank" rel="noopener">Epoch AI — Research on AI Scaling Trends</a>
+            </div>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <video controls preload="metadata">
+                        <source src="../images/age-ai-2026/20260914_210116.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <figcaption class="media-caption"><span class="media-timestamp">21:01:16 EDT</span> Closing video clip from Epoch AI compute scaling chart discussion</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="notes-footer">
+        <div class="container">
+            <p>Notes collected by Aaron Patzalek | Two Birds Innovation (<a href="#linkedin-placeholder">LinkedIn</a>)</p>
+            <p style="margin-top:0.5rem; font-size:0.85rem; opacity:0.8;">&copy; 2026 Two Birds Innovation &middot; St. Thomas, Ontario &middot; <a href="../index.html">Home</a> &middot; <a href="../consulting.html">Consulting</a></p>
+        </div>
+    </footer>
+</body>
+</html>
