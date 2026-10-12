@@ -77,7 +77,7 @@
 - Physical address (business mailing address — St. Thomas, ON)
 - Canadian registration implied by GST/HST registration and Ontario incorporation (if filed)
 - Privacy policy with PIPEDA compliance statement
-- No inflated claims ("20+ years of experience" not "industry-leading AI pioneer")
+- No inflated claims ("15+ years of experience" not "industry-leading AI pioneer")
 
 ---
 
