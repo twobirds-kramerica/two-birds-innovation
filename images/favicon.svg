@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Two Birds Innovation">
-  <!-- TBI mark: navy rounded square (--space-900) + teal gradient "TB" monogram, matching the site's existing brand tokens (css/style.css --space-900 / --teal-500 / --teal-400) and the og-card.svg palette. -->
-  <defs>
-    <linearGradient id="tbi-teal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#14b8a6"/>
-      <stop offset="100%" stop-color="#2dd4bf"/>
-    </linearGradient>
-  </defs>
-  <rect width="32" height="32" rx="7" fill="#0c0a1d"/>
-  <text x="16" y="22" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="url(#tbi-teal)">TB</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Two Birds Innovation">
+  <!-- Route 2 favicon cut (brand-guidelines.md section 6): the real V05 chevron logo on its blue tile, starfield dropped, strokes thickened for small sizes. Geometry from two-birds-portfolio/assets/logos/two-birds/two-birds-logo.svg -->
+  <rect width="1024" height="1024" rx="200" ry="200" fill="#0066CC"/>
+  <polyline points="210,195 550,335 210,475" fill="none" stroke="#FFFFFF" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="550" cy="335" r="40" fill="#FFFFFF"/>
+  <circle cx="210" cy="195" r="40" fill="#FFFFFF"/>
+  <polyline points="814,549 474,689 814,829" fill="none" stroke="#FFFFFF" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="474" cy="689" r="40" fill="#FFFFFF"/>
+  <circle cx="814" cy="829" r="40" fill="#FFFFFF"/>
 </svg>
