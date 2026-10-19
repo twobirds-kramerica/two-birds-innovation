@@ -1054,6 +1054,25 @@ body {
     color: var(--teal-300);
 }
 
+.product-link-off {
+    color: var(--grey-400);
+    font-weight: 500;
+}
+
+.stage-badge {
+    align-self: flex-start;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+}
+
+.stage-beta { color: var(--teal-400); }
+.stage-alpha { color: var(--gold); }
+
 /* Who We Serve */
 .section-serve {
     background: var(--space-800);
